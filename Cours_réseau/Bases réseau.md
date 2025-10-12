@@ -10,8 +10,8 @@ Chaque carte réseau à une MAC adresse unique, c'est ce qui permet d'identifier
 
 ## VLAN
 
-Les vlan permettent de segmenter le réseau.  
-Les vlan se configurent depuis les switch dits manageable.  
+Les __vlan__ permettent de segmenter le réseau.  
+Les __vlan__ se configurent depuis les switch dits manageable.  
 Un switch basique ne connait pas les vlan.  
 Penser au mode __trunk__ entre les switch pour transporter des vlan d'un switch à un 
 
@@ -107,8 +107,10 @@ L'adresse de Broadcast partiel = la dernière adresse théorique (ex: 192.168.29
 Unicast = 1 destinataire
 Broadcast = tous les ordinateurs du réseau
 
+Voici un tableau pertinent qui montre les IP de la notation CIDR 8 à 30  
+![Tableau d'ip](ips.png)
+
 NB: grâce à la technique du trait(écrire l'ip et le masque en binaire et tracer un trait à partir du dernier 1 du masque de sous réseau) :  
 
 - pour calculer le n° de réseau à droite du trait que des 0 dans l'adresse IP
 - pour le broadcast partiel à droite du trait que des 1 dans l'adresse IP  
-test je modifie blablabla
