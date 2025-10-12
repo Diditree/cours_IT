@@ -109,8 +109,24 @@ Broadcast = tous les ordinateurs du réseau
 
 Voici un tableau pertinent qui montre les IP de la notation CIDR 8 à 30  
 ![Tableau d'ip](ips.png)
+( mnémotechnique : on fait -x qu’on multiplie par 2 à chaque fois qu’on enlève 
+un 0 exemple : 255 -1 = 254 puis 254 -2 = 252 puis 252 – 4 = 248 etc )  
+
 
 NB: grâce à la technique du trait(écrire l'ip et le masque en binaire et tracer un trait à partir du dernier 1 du masque de sous réseau) :  
 
 - pour calculer le n° de réseau à droite du trait que des 0 dans l'adresse IP
 - pour le broadcast partiel à droite du trait que des 1 dans l'adresse IP  
+
+![Trait](exemple_du_trait.png)  
+
+
+
+
+## Rôles
+
+Le serveur __DHCP__ (Dynamic Host Configuration Protocol) permet d’attribuer dynamiquement des paramètres TCP/IP aux périphériques qui en font la demande. 
+
+Le serveur __DNS__ (Domain Name System) fournit un service de résolution de noms en adresses IP et réciproquement.
+
+__NAS__ (Network Attached Storage) définit un environnement permettant l’accès à du stockage au travers du réseau (Ethernet).
