@@ -2,7 +2,7 @@
 
 ## CMD 
 
-`hostname` :  
+`hostname` :  nom de la machine
 `route` : permet de gérer la table de routage  
 `arp -a` : table liée au cache ARP  
 `Netstat` : liste les ports ouverts  
