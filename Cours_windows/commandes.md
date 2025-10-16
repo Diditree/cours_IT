@@ -2,12 +2,13 @@
 
 ## CMD 
 
-`hostname` :  nom de la machine
+`hostname` :  nom de la machine  
 `route` : permet de gérer la table de routage  
 `arp -a` : table liée au cache ARP  
-`Netstat` : liste les ports ouverts  
+`netstat` : liste les ports ouverts  
 
 ## Executer (w+r)
 lancer une commande en /safe = mode sans echec  
 
-`sysdm.cpl`  
+`sysdm.cpl` : renommer pc, ajout du domaine  
+`ncpa.cpl` : réseaux

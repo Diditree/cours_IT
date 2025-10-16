@@ -13,11 +13,14 @@ Chaque carte réseau à une MAC adresse unique, c'est ce qui permet d'identifier
 Les __vlan__ permettent de segmenter le réseau.  
 Les __vlan__ se configurent depuis les switch dits manageable.  
 Un switch basique ne connait pas les vlan.  
-Penser au mode __trunk__ entre les switch pour transporter des vlan d'un switch à un 
+Penser au mode __trunk__ entre les switch pour transporter des vlan d'un switch à un autre  
 
 ## TCP/IP
 
 ### Adresses IP
+
+Adresse réseau = pair  
+Adresse broadcast = impair  
 
 Les adresses __IPv4__ sont toutes codées sur __4 octet__ , 1 octet = __8 bit__ donc une adresse IP c'est __32 bits__ séparés en 4 blocs de 8  
 Exemple: 192.168.29.1  
@@ -120,9 +123,25 @@ NB: grâce à la technique du trait(écrire l'ip et le masque en binaire et trac
 
 ![Trait](exemple_du_trait.png)  
 
+#### Comment partager son réseau  ?
+
+On peut faire plusieurs sous réseaux à partir d'un même masque.  
+
+Ex : Notre entreprise dispose de la plage 192.168.1.0/24 on souhaite diviser le réseau en 2 parties équitables.  
+
+On va utiliser le masque __192.168.1.0/25__  
+Réseau 1 : 192.168.1.0 > 192.168.1.128  
+Réseau 2 : 192.168.1.129 > 192.168.1.255  
 
 
+Comment partager à partir d'une plage :
+On décalle le bit du masque ex:  
+- on souhaite 2 sous réseaux, on décalle de 1  
+- on souhaite 4 sous réseaux, on décalle de 2  
+- on souhaite 8 sous réseaux, on décalle de 3  
 
+ ![Visuel de l'explication du partage](sousreseau.png)
+   
 ## Rôles
 
 Le serveur __DHCP__ (Dynamic Host Configuration Protocol) permet d’attribuer dynamiquement des paramètres TCP/IP aux périphériques qui en font la demande. 
