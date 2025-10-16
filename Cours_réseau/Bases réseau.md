@@ -141,7 +141,13 @@ On décalle le bit du masque ex:
 - on souhaite 8 sous réseaux, on décalle de 3  
 
  ![Visuel de l'explication du partage](sousreseau.png)
-   
+
+ Un réseau /30 est un réseau dit "point à point" (il ne contient que 2ip pour les hotes)
+
+## Routing
+
+TODO
+
 ## Rôles
 
 Le serveur __DHCP__ (Dynamic Host Configuration Protocol) permet d’attribuer dynamiquement des paramètres TCP/IP aux périphériques qui en font la demande. 
