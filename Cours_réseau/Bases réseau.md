@@ -145,8 +145,9 @@ On décalle le bit du masque ex:
  Un réseau /30 est un réseau dit "point à point" (il ne contient que 2ip pour les hotes)
 
 ## Routing
-
-TODO
+<!-- TODO compléter pat et nat -->
+__PAT__  :
+__NAT__  :
 
 ## Rôles
 
