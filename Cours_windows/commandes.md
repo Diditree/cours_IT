@@ -6,6 +6,8 @@
 `route` : permet de gérer la table de routage  
 `arp -a` : table liée au cache ARP  
 `netstat` : liste les ports ouverts  
+`ipconfig`  
+
 
 ## Executer (w+r)
 lancer une commande en /safe = mode sans echec  
