@@ -14,4 +14,11 @@ ex : `cd /home/didi/Documents/projet.txt`
 - Chemin relatif = par rapport au repertoire courant  
 ex : `cd .`
 
-## 
+## ??
+
+
+/etc/os-release : info distribution.
+
+/etc/hostname, /etc/hosts : nom machine.
+
+/home/<user> : dossier utilisateur.
