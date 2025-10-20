@@ -34,7 +34,7 @@ On retrouve aussi __.ssh__ où on va retrouver les différentes clés ssh etc
 
 ## /root
 
-Repertoire admin
+Repertoire admin (la home de root)
 
 ## /sys
 
@@ -42,17 +42,17 @@ Pour __system__ , système de fichier virtuel (donc qui n'existe pas vraiment su
 
 ## /boot
 
-Contient tout ce ton on a besoin pour booter(bootloader et kernel)
+Contient tout ce dont on a besoin pour booter (bootloader et kernel)
 
 ## /var
 
-Variables, contient tout ce qui peut changer (exemple : www pour un site web, les log, spool)  
+Variables, contient tout ce qui peut changer (exemple : www pour un site web, les logs, spool)  
 Il y a aussi un __lib__ qui va contenir les fichiers __variables__ utilisés par __usr/lib__
 
 
 ## /dev
 
-pour device : systèmes de fichiers virtuels, qui va permettre d'interagir avec des peripheriques  (cartes sons, disque dur)
+pour device : systèmes de fichiers virtuels, qui va permettre d'interagir avec des peripheriques  (tty, cartes sons, disque dur)
 
 
 ## /tmp
@@ -61,4 +61,12 @@ Temporary , s'efface à chaque reboot de la machine la plus part du temps.
 
 ## /opt
 
-Pour optionnel.
+Pour optionnel
+
+## /etc
+
+fichiers de configuration pour différents applicatifs
+
+## /lib
+
+contient les librairies utilisée par les binaires ou applicatifs
