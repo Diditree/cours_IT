@@ -55,4 +55,18 @@ uptime
 free -h # affiche la ram utilisée et disponible
 
 df -h # affiche l'espace disque
- ```
+
+grep -i "word" /fichier # recherche le mot word dans le fichier
+
+sed
+
+awk
+
+cut
+
+sort
+
+uniq
+
+
+```
