@@ -14,3 +14,13 @@ lancer une commande en /safe = mode sans echec
 
 `sysdm.cpl` : renommer pc, ajout du domaine  
 `ncpa.cpl` : réseaux
+`compmgmt.msc` : ouvre le gestionnaire d'ordinateur
+`msfinfo32` : info sys
+`services.msc`
+`firewall.cpl`
+`wf.msc` : firewall
+`lusrmgr.msc` : local users
+
+## Raccourcis clavier
+
+Win + i
