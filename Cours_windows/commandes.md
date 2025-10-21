@@ -6,7 +6,10 @@
 `route` : permet de gérer la table de routage  
 `arp -a` : table liée au cache ARP  
 `netstat` : liste les ports ouverts  
-`ipconfig`  
+`ipconfig` 
+`dir` : ls
+`more` : cat
+
 
 
 ## Executer (w+r)
@@ -20,6 +23,7 @@ lancer une commande en /safe = mode sans echec
 `firewall.cpl`
 `wf.msc` : firewall
 `lusrmgr.msc` : local users
+`mmc` : console
 
 ## Raccourcis clavier
 
