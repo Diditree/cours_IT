@@ -80,7 +80,7 @@ Grâce au tableau on sait que __192.138.29.1__ = 11000000.10001010.00011101.0000
 192.138.29.1  
 &255.255.255.0
 
-on va comparer chaque binaire, par exemple pour 1le premier octet qui est 192
+on va comparer chaque binaire, par exemple pour 1 le premier octet qui est 192
 
 |       |       |       |       |       |       |       |       |       |       |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -156,3 +156,31 @@ Le serveur __DHCP__ (Dynamic Host Configuration Protocol) permet d’attribuer d
 Le serveur __DNS__ (Domain Name System) fournit un service de résolution de noms en adresses IP et réciproquement.
 
 __NAS__ (Network Attached Storage) définit un environnement permettant l’accès à du stockage au travers du réseau (Ethernet).
+
+
+## Calculer des sous réseaux :
+
+192.168.10.0/24 , on souhaite 8 sous-réseaux
+
+On doit "emprunter" des bits à la partie HOTE pour créer des parties réseau
+
+pour ça on peut utiliser une formule mathématique : 2n bits empruntés = le nombre de sous réseaux qu'on veut.  
+
+On souhaite 8 sous réseaux donc, 2 puissance 3 = 8 donc il faut empruntés 3 bits pour avoir 8 sous réseaux  
+
+CIDR /24 + 3 = CIDR /27  
+
+le masque en bits : 11111111.11111111.11111111.11100000 (255.255.255.224)
+
+Maintenant pour savoir la taille d'un sous réseaux il suffit de faire 256 - 224 = 32 , donc chaque sous-réseau démarre tous les 32 dans le dernier octet.
+
+|    # | Adresse réseau    | Première utilisable | Dernière utilisable | Broadcast      |
+| ---: | :---------------- | :------------------ | :------------------ | :------------- |
+|    1 | 192.168.10.0/27   | 192.168.10.1        | 192.168.10.30       | 192.168.10.31  |
+|    2 | 192.168.10.32/27  | 192.168.10.33       | 192.168.10.62       | 192.168.10.63  |
+|    3 | 192.168.10.64/27  | 192.168.10.65       | 192.168.10.94       | 192.168.10.95  |
+|    4 | 192.168.10.96/27  | 192.168.10.97       | 192.168.10.126      | 192.168.10.127 |
+|    5 | 192.168.10.128/27 | 192.168.10.129      | 192.168.10.158      | 192.168.10.159 |
+|    6 | 192.168.10.160/27 | 192.168.10.161      | 192.168.10.190      | 192.168.10.191 |
+|    7 | 192.168.10.192/27 | 192.168.10.193      | 192.168.10.222      | 192.168.10.223 |
+|    8 | 192.168.10.224/27 | 192.168.10.225      | 192.168.10.254      | 192.168.10.255 |
