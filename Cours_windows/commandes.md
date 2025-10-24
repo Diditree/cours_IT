@@ -9,12 +9,13 @@
 `ipconfig` 
 `dir` : ls
 `more` : cat
-
+`diskpart` : disques de stockage depuis cmd (commandes liées : ?,help,list,select)
 
 
 ## Executer (w+r)
 lancer une commande en /safe = mode sans echec  
 
+`diskmgmt.msc` : console des disques stockages  
 `sysdm.cpl` : renommer pc, ajout du domaine  
 `ncpa.cpl` : réseaux
 `compmgmt.msc` : ouvre le gestionnaire d'ordinateur
