@@ -164,11 +164,11 @@ __NAS__ (Network Attached Storage) définit un environnement permettant l’acc�
 
 On doit "emprunter" des bits à la partie HOTE pour créer des parties réseau
 
-pour ça on peut utiliser une formule mathématique : 2n bits empruntés = le nombre de sous réseaux qu'on veut.  
+pour savoir combien de bits on va emprunter on peut utiliser une formule mathématique : 2n=8⟹n=3
 
 On souhaite 8 sous réseaux donc, 2 puissance 3 = 8 donc il faut empruntés 3 bits pour avoir 8 sous réseaux  
 
-CIDR /24 + 3 = CIDR /27  
+à la base CIDR /24 on ajoute les 3 bits = CIDR /27  
 
 le masque en bits : 11111111.11111111.11111111.11100000 (255.255.255.224)
 
