@@ -36,9 +36,3 @@ Créer un nouveau groupe local.
 ```PowerShell
 New-LocalGroup -Name "Nom"
 ```
-
-
-
-
-
-
