@@ -12,6 +12,8 @@
 - `diskpart` : disques de stockage depuis cmd (commandes liées : ?,help,list,select)  
 - `net user` (net help user pour l'aide détaillée)  
 - `net localgroup` (net help localgroup)
+- `whoami /user` : pour voir le SID  
+
 
 ## Executer (w+r)
 lancer une commande en /safe = mode sans echec  
