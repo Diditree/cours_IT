@@ -18,5 +18,5 @@ Ctrl + espace pour voir toutes les options d'une commande
 /////////////////////////
 
 
-`get-acl M:\2022` pour voir les ACL sur le dossier 2022 dans M:  
+`get-acl M:\2022 | format-list` pour voir la liste des ACL sur le dossier 2022 dans M:
 `set-acl` pour changer les droits
