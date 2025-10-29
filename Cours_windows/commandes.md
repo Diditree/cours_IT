@@ -33,6 +33,9 @@ lancer une commande en /safe = mode sans echec
 - `secpol.msc` : Stratégie de sécurité locale  
 - `fsmgmt.msc` : Dossiers partagés
 - `mstsc` : connexion à distance
+- `devmgmt.msc` : gestionnaire de périphériques
+  
+
 
 ## Raccourcis clavier
 
