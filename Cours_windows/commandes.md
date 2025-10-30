@@ -34,8 +34,6 @@ lancer une commande en /safe = mode sans echec
 - `fsmgmt.msc` : Dossiers partagés
 - `mstsc` : connexion à distance
 - `devmgmt.msc` : gestionnaire de périphériques
-  
-
 
 ## Raccourcis clavier
 
