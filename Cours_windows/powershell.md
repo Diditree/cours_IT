@@ -29,7 +29,7 @@ Formatage: FL(formatList), FW(Format-Wide) ne traite qu'une seule propriété
 
 On met le formatage en dernier car celui ci convertit en string les données  
 
- E
+
 /////////////////////////
 
 
