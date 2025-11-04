@@ -65,7 +65,7 @@ Pour optionnel
 
 ## /etc
 
-fichiers de configuration pour différents applicatifs
+fichiers de configuration pour différents applicatifs (motd)
 
 ## /lib
 

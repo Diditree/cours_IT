@@ -9,6 +9,7 @@ su ## switch user (sudo su)
 pwd # affiche le repo courant 
 
 mkdir # créer un repo
+# -p : créer les fichiers parents
 
 touch # créer un fichier vide
 
