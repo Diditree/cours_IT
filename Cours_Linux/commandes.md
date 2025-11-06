@@ -60,6 +60,12 @@ df -h # affiche l'espace disque
 
 grep -i "word" /fichier # recherche le mot word dans le fichier  
 # -v = inverse ex : grep -v ^# (affiche tout ce qui ne commence pas par # )  
+# Penser à l'option -s pour retirer les erreurs
+
+
+find # permet de trouver un fichier par nom
+# si on souhaite trouver un fichier dans /etc qui commence pas ho on fait comme ceci : find /etc -name "ho*"
+# et qui termine par txt : find /etc -name "*txt"
 
 sed
 
