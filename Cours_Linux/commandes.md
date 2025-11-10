@@ -44,6 +44,11 @@ ls #liste les éléments dans le current repo
 
 man commande # la doc de la commande
 
+ps -f
+
+jobs # permet de voir/gérer les processus en arrière plan
+# -l 
+
 
 sudo shutdown
 
@@ -64,8 +69,12 @@ grep -i "word" /fichier # recherche le mot word dans le fichier
 
 
 find # permet de trouver un fichier par nom
-# si on souhaite trouver un fichier dans /etc qui commence pas ho on fait comme ceci : find /etc -name "ho*"
-# et qui termine par txt : find /etc -name "*txt"
+# si on souhaite trouver un fichier dans /etc qui commence pas ho on fait comme ceci : find /etc/* -name "ho*"
+# et qui termine par txt : find /etc/* -name "*txt"
+#
+# Si on souhaite trouver tous les fichiers du dossier perso qui terminent par txt et en faire une copie :
+# find ~ -type f -name "*txt" -exec cp {} {}.save \;  
+# -mount : Ne pas parcourir les répertoires situés sur d'autres systèmes de fichiers. (alternative à -xdev)
 
 sed
 
@@ -79,10 +88,12 @@ uniq
 
 more
 
-tail
+tail -f log.log
 
 head
 
 less
 
 ```
+
+test
