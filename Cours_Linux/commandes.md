@@ -3,7 +3,7 @@
 ```bash
 !! #permet de re écrire la dernière commande (sudo !! , retape la dernière commande avec sudo)#
  
-su ## switch user (sudo su)
+su # switch user (sudo su) , su - (su root)
 
 pwd # affiche le repo courant 
 
@@ -75,6 +75,11 @@ find # permet de trouver un fichier par nom
 # Si on souhaite trouver tous les fichiers du dossier perso qui terminent par txt et en faire une copie :
 # find ~ -type f -name "*txt" -exec cp {} {}.save \;  
 # -mount : Ne pas parcourir les répertoires situés sur d'autres systèmes de fichiers. (alternative à -xdev)
+
+alias ll='ls -l' # création d'un alias pour ls -l
+unalias ll
+
+systemctl  # permet de gérer les services
 
 sed
 
