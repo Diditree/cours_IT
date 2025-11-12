@@ -4,7 +4,7 @@
 
 __networking__    
 
-NetworkManager (pour client graphique) > mtui et mcli  
+NetworkManager (pour client graphique) > possibilité d'utiliser nmtui et nmcli  
 
 exemple si on souhaite redémarrer le service networking :  
 `systemctl restart networking`  
