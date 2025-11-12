@@ -80,6 +80,10 @@ alias ll='ls -l' # création d'un alias pour ls -l
 unalias ll
 
 systemctl  # permet de gérer les services
+# get-default pour connaitre par défaut
+# set-default
+
+ip a
 
 sed
 
