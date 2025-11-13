@@ -21,6 +21,8 @@ lo = loopback 127.0.0.1
 
 /etc/network/interfaces  
 
+à la place d'auto il est possible de mettre allow-hotplug  
+
 Configuration dhcp :  
 ```bash
 # The loopback network interface

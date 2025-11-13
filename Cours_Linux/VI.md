@@ -1,5 +1,9 @@
 # Notes liées à VI
 
+## Cheatsheet
+
+
+## ??
 
 `:g/Dieu/s/Anubis/Isis/g` : Rechercher toutes les lignes contenant Dieu, puis rechercher dans ces lignes le terme Anubis pour le
 remplacer par Isis (même si plusieurs Anubis sont présents sur les lignes)  

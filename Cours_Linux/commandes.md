@@ -83,6 +83,13 @@ systemctl  # permet de gérer les services
 # get-default pour connaitre par défaut
 # set-default
 
+fdisk
+fdisk -l # liste les disques et leurs partitions
+blkid
+
+e2label # Modifie le label d'une partition
+
+
 ip a
 
 sed
