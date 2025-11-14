@@ -83,12 +83,20 @@ systemctl  # permet de gérer les services
 # get-default pour connaitre par défaut
 # set-default
 
+###############
+#stockage
+###############
 fdisk
 fdisk -l # liste les disques et leurs partitions
 blkid
+vgs
+pvs
+vgdisplay # affiche les groupes LV
 
 e2label # Modifie le label d'une partition
+###############
 
+###############
 
 ip a
 

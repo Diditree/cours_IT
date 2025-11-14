@@ -2,6 +2,9 @@
 
 ## Notes
 
+https://explainshell.com/
+
+
 Double tabulation pour montrer toutes les commandes ex: C > double tabulation; va montrer les commandes qui commencent par C
 
 ## Terminal vs Console vs Shell
