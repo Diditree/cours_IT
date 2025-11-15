@@ -1,5 +1,13 @@
 # Notes liées à VI
 
+## /.vimrc
+```bash
+set nocompatible
+set number
+set relativenumber
+set tabstop=4
+```
+
 ## Cheatsheet
 
 
