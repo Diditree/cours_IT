@@ -1,4 +1,4 @@
-# Rempalcer /var par la partition logique var sans perdre le contenu de /var
+# Remplacer /var par la partition logique var sans perdre le contenu de /var
 
 - démarrer en mode rescue (systemctl isolate rescue.target) > permet qu'il n y ait pas de nouvelle écriture dans /var
 - créer et se placer dans /mnt/vartemp
