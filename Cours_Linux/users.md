@@ -9,14 +9,14 @@
 Structure d'une ligne :  
 __login__:__x__(anciennement le mdp):__UID__:__GID__(groupe principal du user):__champ commentaires GCOS__:__repertoire personnel__:__shell par défaut__    
 
-les mdps sont maintenant stockés dans `/etc/shadow`  
+les mdps sont stockés dans `/etc/shadow`  
 
 `/etc/default/useradd` : options par défaut utilisées dans `user add`  
 
 `/etc/login.defs` : autres options par défaut pour `user add`
 
 ```bash
-user # useradd nomDuUser -u UID -g Groupe principal -G Groupes secondaires -c "commentaire" -md(m=makeDir d=chemin) /home/loginDuUser -s(shell) /bin/shell 
+user # useradd nomDuUser -u UID -g Groupe principal -G Groupes secondaires -c "commentaire" -md(m=makeDir d=chemin) /home/loginDuUser -s(shell) /bin/sh
 
      # usermod (mêmes options)
 
@@ -24,7 +24,6 @@ user # useradd nomDuUser -u UID -g Groupe principal -G Groupes secondaires -c "c
 
 passwd # permet de gérer le password
 ```
-
 
 ## UID
 
