@@ -9,6 +9,8 @@ pwd # affiche le repo courant
 
 mkdir # créer un repo
 # -p : créer les fichiers parents
+# -m : créer les droits en même temps
+# -p : 
 
 touch # créer un fichier vide
 
@@ -117,6 +119,9 @@ tail -f log.log
 head
 
 less
+
+du -sh # Totaliser l'occupation du périphérique pour l'ensemble des fichiers, récursivement pour les repertoires -h pour humain readable et -s pour summarize
+
 
 ```
 
