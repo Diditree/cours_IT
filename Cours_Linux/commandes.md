@@ -84,6 +84,7 @@ unalias ll
 systemctl  # permet de gérer les services
 # get-default pour connaitre par défaut
 # set-default
+# list-units
 
 ###############
 #stockage

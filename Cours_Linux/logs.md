@@ -1,5 +1,8 @@
 # logs
 
+
+journalctl | grep "session opened"
+
 ## journald
 
 conf: /etc/systemd/journald.conf  
@@ -21,3 +24,16 @@ journalctl
 conf = /etc/rsyslog.conf  
 fichier de service : rsyslog.service  
 stock les logs dans des fichiers textes  
+
+8 niveaux de gravité  
+
+
+
+## exemples
+
+Récupérer les dernières sessions connectées :   
+`journalctl -g "password:session" -S "2 days ago"`   
+`journalctl | grep "session opened"`   
+
+Rechercher dans les fichiers rsyslog des informations sur le disque sda :  
+`grep "sda" /var/log/syslog`
