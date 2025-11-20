@@ -1,6 +1,5 @@
 # Notes
 
-cp -rp : copie les liens symboliques
 
 
 `mkdir -vp ./{bin,tp/{bourne,kornshell,divers/{sources,lib,executables}}}`

@@ -37,3 +37,8 @@ Récupérer les dernières sessions connectées :
 
 Rechercher dans les fichiers rsyslog des informations sur le disque sda :  
 `grep "sda" /var/log/syslog`
+
+
+Rotation des journaux:  
+
+`etc/logrotate.d/wtmp`

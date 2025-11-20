@@ -1,4 +1,7 @@
 ## Cheatsheet de commandes Linux
+On peut écrire pluseurs commandes sur une seule ligne avec le séparateur `;` : `who; ps -f` (ou &&)   
+
+On peut regrouper les commandes avec des () : `(who; ps aux) >> fichier.txt`  
 
 ```bash
 !! #permet de re écrire la dernière commande (sudo !! , retape la dernière commande avec sudo)#
@@ -18,6 +21,7 @@ cat # affiche le contenu complet d'un fichier
 # cat permet aussi d'écrire dans des fichiers avec le >
 
 cp # copy
+   # -rp : copie les liens symboliques
 
 mv # déplace
 
@@ -33,6 +37,8 @@ ls #liste les éléments dans le current repo
 #   -1 : liste 
 #   -d : le nom des fichiers et pas le contenu
 
+last # affiche une liste des users dernièrement connectés
+
 #### Arguments ####
 / # repertoire racine
 
@@ -47,6 +53,9 @@ ls #liste les éléments dans le current repo
 man commande # la doc de la commande
 
 ps -f
+# aux (pour voir le proc/memoire)
+# ps -o pcpu,pmem,cmd (affiche le cpu utilisé, mémoire utilisée, et la commande)
+# -e affiche tous les processus
 
 jobs # permet de voir/gérer les processus en arrière plan
 # -l 
@@ -125,5 +134,3 @@ du -sh # Totaliser l'occupation du périphérique pour l'ensemble des fichiers, 
 
 
 ```
-
-test
