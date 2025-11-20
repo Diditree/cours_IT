@@ -74,9 +74,9 @@ lvs # logique
 
 ```bash
 
-lsof : permet de connaitre l’activité des fichiers ouverts dans un répertoire donné
+lsof # permet de connaitre l’activité des fichiers ouverts dans un répertoire donné
 
-file permet de connaître la nature d’un fichier.
+file # permet de connaître la nature d’un fichier.
 
-du permet de visualiser l’espace occupé par des répertoires.
+du # permet de visualiser l’espace occupé par des répertoires.
 ```
