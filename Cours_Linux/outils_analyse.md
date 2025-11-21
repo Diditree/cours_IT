@@ -27,6 +27,7 @@ free -h
 ### Activité des processus
 ```bash
 ps -ef
+ps -fu
 ps aux
 top # htop,atop,glances (seul top est installé nativement)
 pstree
@@ -73,7 +74,6 @@ lvs # logique
 
 
 ```bash
-
 lsof # permet de connaitre l’activité des fichiers ouverts dans un répertoire donné
 
 file # permet de connaître la nature d’un fichier.

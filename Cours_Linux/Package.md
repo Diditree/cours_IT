@@ -17,3 +17,4 @@ chaque commande de paquets à ses logs :
 `apt show <paquet>`  
 
 `apt list --upgradable`
+`apt list *nom*` # liste tous les paquets qui contiennent nom

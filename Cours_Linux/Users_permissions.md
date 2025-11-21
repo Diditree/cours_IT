@@ -2,6 +2,8 @@
 
 https://doc.ubuntu-fr.org/permissions
 
+_à voir `umask`_
+
 `sudo adduser didi` créer un nouvel utilisateur didi , créer un /home/didi , enregistre les infos demandées dans __etc/passwd__ et __/etc/shadow__
 
 _à voir `useradd`_
