@@ -5,9 +5,9 @@
 - monter /dev/mapper/GroupVolumeD12-var (/dev/GroupVolumeD12/var) dans /mnt/vartemp
 - déplacer(mv /var/* /mnt/vartemp/.)
 - démonter /mnt/vartemp (umount /mnt/vartemp)
-- configurer etc/fstab (/dev/mapper/GroupVolumeD12-var /var ext4 defaults 0 0) ou (UUID=11111 var ext4 defaults 0 0)  
+- configurer etc/fstab (/dev/mapper/GroupVolumeD12-var /var ext4 defaults 0 0) ou (UUID=xxxxxxxx-xxx-xxx-xxx var ext4 defaults 0 0)  
 
-UUID="e7871342-084a-4b37-a6be-fc3c1c5a0707"
+
 
 
 lsof : list open files (sert à lister les fichiers ouverts)

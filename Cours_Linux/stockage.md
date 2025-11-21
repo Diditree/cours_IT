@@ -21,7 +21,7 @@ les partitions logiques sont par exemple home,root,swap,var...
 
 Pour créer une nouvelle partition logique de 20GB qui s'appelerait var : `lvcreate -n var -L 20G <groupe volume>`  
 
-`lvextend -l +100%FREE </dev/group/partition>` (voir -r)  
+`lvextend -l +100%FREE </dev/group/partition>` (on peut ajouter -r qui permet de faire un resize2fs directement)  
 
 
 ## Créer une partition
