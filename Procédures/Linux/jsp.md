@@ -17,24 +17,36 @@ lsof | grep "/var"
 
 
 
-# /data
+# montage /data sur /dev/sda1
+
+correction Thélo à tester:
+(
+
+créer système
+créer point de montage old_data
+copier /data vers old_data
+monter /data sur sda1
+copier les données de old_data vers /data
+
+)
+
+
 
 Crér un systme de fichiers :
 `sudo mkfs.ext4 /dev/sda1`
 
-Créer un point de montage temporaire:
+Créer un point de montage temporaire: (old_data au lieu de newdata)
 `sudo mkdir /mnt/newdata`
 
-monter la partition:
+monter la partition: (monter avant de move peut être)
 `sudo mount /dev/sda1 /mnt/newdata`
 
 
-move /data dans /mnt:
+move /data dans /mnt (cp -a)
 `sudo mv /data/* /mnt/newdata/.`
 
 créer un old_data
 `sudo cp -rp /mnt/newdata old_data`
-
 
 démonter /mnt/newdata
 `umount /mnt/newdata`
