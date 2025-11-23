@@ -19,46 +19,35 @@ lsof | grep "/var"
 
 # montage /data sur /dev/sda1
 
-correction Thélo à tester:
-(
 
-créer système
-créer point de montage old_data
-copier /data vers old_data
-monter /data sur sda1
-copier les données de old_data vers /data
+Crér un système de fichiers :
+`sudo mkfs.ext4 /dev/sdb`
 
-)
-
-
-
-Crér un systme de fichiers :
-`sudo mkfs.ext4 /dev/sda1`
-
-Créer un point de montage temporaire: (old_data au lieu de newdata)
+Créer un point de montage temporaire :
 `sudo mkdir /mnt/newdata`
 
-monter la partition: (monter avant de move peut être)
-`sudo mount /dev/sda1 /mnt/newdata`
+monter la partition sur le montage temporaire :
+`sudo mount /dev/sdb /mnt/newdata`
 
-
-move /data dans /mnt (cp -a)
-`sudo mv /data/* /mnt/newdata/.`
-
-créer un old_data
-`sudo cp -rp /mnt/newdata old_data`
+copier le contenu de /data dans le montage temporaire :
+`sudo cp -a /data/. /mnt/newdata`
 
 démonter /mnt/newdata
-`umount /mnt/newdata`
+`sudo umount /mnt/newdata`
 
-monter la nouvelle partition:
-`sudo mount /dev/sda1 /data`
-(On monte deux fois car le premier montage sert à préparer la partition, et le second à la mettre en production.)
+renommer l'ancien /data :
+`sudo mv /data /data.old`
 
+recréer un dossier /data vide :
+`sudo mkdir /data`
+
+
+monter le disque sur /data:
+`sudo mount /dev/sdb /data`
 
 récupérer l'UUID:
 `sudo blkid /dev/sda1`
-UUID="68d8a28d-f140-4335-bb64-45845db38249"
+ex : UUID="68d8a28d-f140-4335-bb64-45845db38249"
 
 
 créer la ligne dans /etc/fstab
