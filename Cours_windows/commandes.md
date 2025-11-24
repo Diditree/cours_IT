@@ -14,7 +14,6 @@
 - `net localgroup` (net help localgroup)
 - `whoami /user` : pour voir le SID  
 
-
 ## Executer (w+r)
 lancer une commande en /safe = mode sans echec  
 
@@ -26,9 +25,8 @@ lancer une commande en /safe = mode sans echec
 - `services.msc`  
 - `firewall.cpl`  
 - `wf.msc` : firewall  
-- `lusrmgr.msc` : local users
+- `lusrmgr.msc` : gestion des utilisateurs et groupes locaux
 - `mmc` : console
-- `usrmgr.msc` : gestion des utilisateurs et groupes locaux
 - `compmgmt.msc` : gestion du pc  
 - `secpol.msc` : Stratégie de sécurité locale  
 - `fsmgmt.msc` : Dossiers partagés

@@ -1,0 +1,1 @@
+net user cpeletier /time:L-V,09:00-12:00
