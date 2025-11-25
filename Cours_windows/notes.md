@@ -1,1 +1,1 @@
-net user cpeletier /time:L-V,09:00-12:00
+net user cpeletier /time:L-V,09:00-12:00 : ouverture de session possible seulement Lundi-Vendedi de 9h00 à 12h00
