@@ -34,6 +34,7 @@ Pour créer une nouvelle partition logique de 20GB qui s'appelerait var : `lvcre
 
 `mkfs.ext4 -L VAR /dev/GroupeVolumeD12/var` : formate en ext4 /var et lui attribut le label VAR  
 
+(`xfs_admin -L LABEL` : changer le label d'un xfs)
 
 ## Montage
 

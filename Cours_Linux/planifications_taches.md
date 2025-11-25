@@ -43,5 +43,3 @@ septembre, novembre
 Périodicité : tous les jours ouvrables de la semaine à 12h45
 
 `0 5 * * 1 /opt/bin/backup.sh` : Tâche exécutée chaque lundi à 5h du matin durant toute l’année quel que soit le mois
-
-
