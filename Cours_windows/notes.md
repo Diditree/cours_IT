@@ -6,3 +6,8 @@
 
 
 `path.exe /S` : execute un .exe en mode silent
+
+
+
+
+https://www.sos-grannygeek.com/mini-tutos/windows-11-sauvegarder-ses-dossiers-automatiquement/
