@@ -13,6 +13,7 @@
 - `net user` (net help user pour l'aide détaillée)  
 - `net localgroup` (net help localgroup)
 - `whoami /user` : pour voir le SID  
+- `gpresult /x` : générer un rapport
 
 ## Executer (w+r)
 lancer une commande en /safe = mode sans echec  

@@ -11,3 +11,10 @@
 
 
 https://www.sos-grannygeek.com/mini-tutos/windows-11-sauvegarder-ses-dossiers-automatiquement/
+
+
+swap sur windows :
+- sysdm.cpl
+- paramètres systèmes avancés
+- perfomances : paramètres
+- avancé

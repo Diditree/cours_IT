@@ -50,3 +50,18 @@ mount
 `/mnt` : montage temporaire
   
 `/etc/fstab` : montage automatique
+
+
+
+
+
+
+
+
+
+
+
+
+sudo mount -t cifs //172.15.44.1/Support_Info /mnt/support -o username=dimitri,password=didi3112,vers=3.0
+
+-t = type de fichier

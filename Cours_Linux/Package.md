@@ -18,3 +18,10 @@ chaque commande de paquets à ses logs :
 
 `apt list --upgradable`
 `apt list *nom*` # liste tous les paquets qui contiennent nom
+
+
+
+
+deb http://security.debian.org/debian-security bookworm-security main 
+deb http://ftp.fr.debian.org/debian/ bookworm main 
+deb http://ftp.fr.debian.org/debian/ bookworm-updates main 

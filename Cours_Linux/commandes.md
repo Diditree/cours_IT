@@ -8,6 +8,10 @@ On peut regrouper les commandes avec des () : `(who; ps aux) >> fichier.txt`
  
 su # switch user (sudo su) , su - (su root)
 
+sudo -u postgres -i # permet de se connecter à l'user postgres qui est créér automatiquement à l'installation de postgresql
+psql # permet de passer en prompt postgresql
+
+
 pwd # affiche le repo courant 
 
 mkdir # créer un repo

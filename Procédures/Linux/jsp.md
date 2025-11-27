@@ -8,8 +8,6 @@
 - configurer etc/fstab (/dev/mapper/GroupVolumeD12-var /var ext4 defaults 0 0) ou (UUID=xxxxxxxx-xxx-xxx-xxx var ext4 defaults 0 0)  
 
 
-
-
 lsof : list open files (sert à lister les fichiers ouverts)
 
 lsof | grep "/var"
@@ -19,6 +17,8 @@ lsof | grep "/var"
 
 # montage /data sur /dev/sda1
 
+Si besoin de passer en mode maintenance :
+`systemctl isolate rescue.target`
 
 Crér un système de fichiers :
 `sudo mkfs.ext4 /dev/sdb`
