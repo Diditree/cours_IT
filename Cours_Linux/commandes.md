@@ -4,6 +4,9 @@ On peut écrire pluseurs commandes sur une seule ligne avec le séparateur `;` :
 On peut regrouper les commandes avec des () : `(who; ps aux) >> fichier.txt`  
 
 ```bash
+
+which # localiser le repo d'une commande
+
 !! #permet de re écrire la dernière commande (sudo !! , retape la dernière commande avec sudo)#
  
 su # switch user (sudo su) , su - (su root)
@@ -82,6 +85,7 @@ grep -i "word" /fichier # recherche le mot word dans le fichier
 # -v = inverse ex : grep -v ^# (affiche tout ce qui ne commence pas par # )  
 # Penser à l'option -s pour retirer les erreurs
 
+visudo
 
 find # permet de trouver un fichier par nom
 # si on souhaite trouver un fichier dans /etc qui commence pas ho on fait comme ceci : find /etc/* -name "ho*"

@@ -20,7 +20,7 @@ lsof | grep "/var"
 Si besoin de passer en mode maintenance :
 `systemctl isolate rescue.target`
 
-Crér un système de fichiers :
+Créer un système de fichiers :
 `sudo mkfs.ext4 /dev/sdb`
 
 Créer un point de montage temporaire :
