@@ -17,7 +17,7 @@ local variableLocal = "test" # permet de déclarer une variable dans un scope(fo
 
 ## Conditions
 ```bash
-if [ "/etc/passwd" ]; then
+if [[ "/etc/passwd" ]]; then
     echo "Le fichier /etc/passwd existe."
 else
     echo "Le fichier /etc/passwd n'existe pas."
