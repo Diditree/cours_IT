@@ -17,3 +17,7 @@ serveur en mode RODC = Controle de domaine en lecture seule
 - Maitre de schéma
 - Maitre de domaine PDC  
 
+Nommer son domaine :
+
+- exemple.com
+- reseau-intranet.net
