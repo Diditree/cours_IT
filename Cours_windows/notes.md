@@ -18,3 +18,5 @@ swap sur windows :
 - paramètres systèmes avancés
 - perfomances : paramètres
 - avancé
+
+driver/etc/hosts > protocoles connus de windows
