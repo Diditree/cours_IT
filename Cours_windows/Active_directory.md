@@ -6,7 +6,10 @@ _source ENI :  Windows Server 2022
 Une __forêt__ est une collection d'un ou plusieurs domaines AD  
 Le premier installé est le __domaine racine__  
 
-serveur en mode RODC = Controle de domaine en lecture seule
+__serveur en mode RODC__ = Controle de domaine en lecture seule  
+(Sites et services Active Directory pour créer un site)  
+(Utilisateurs et Ordinateurs Active Directory > clique droite "domains controler" > créer au préalable...)  
+(penser à changer le controleur de domaine du RODC dans users et ordinateurs AD)
 
 
 
@@ -21,3 +24,13 @@ Nommer son domaine :
 
 - exemple.com
 - reseau-intranet.net
+
+
+On peut arreter/démarrer le service dans `services.msc` > Services de domaine AD ou en utilisant la cmd `net stop ntds` / `net start ntds`
+
+Il est possible de cloner un AD  
+
+## Sécurité de l'AD
+
+www.pingcastle.com : permet de faire un audit de l'annuaire AD  
+GPO bitlocker
