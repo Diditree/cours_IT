@@ -30,6 +30,12 @@ On peut arreter/démarrer le service dans `services.msc` > Services de domaine A
 
 Il est possible de cloner un AD  
 
+## Objets AD
+
+Utilisateur :
+- l’onglet Éditeur d’attributs permet la visualisation et/ou la modification des attributs LDAP de l’objet. 
+
+
 ## Sécurité de l'AD
 
 www.pingcastle.com : permet de faire un audit de l'annuaire AD  
