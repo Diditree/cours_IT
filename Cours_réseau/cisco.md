@@ -40,6 +40,12 @@ NB: On peut copier coller l'intégralité d'une config d'un router
 `show vlan brief` : affiche la base de données locale des VLAN du commutateur et les ports
 qui y sont affectés.
 
+Pour setup Telnet:
+```
+line vty 0 4
+login
+transport input telnet
+```
 
 Créer un VLAN:
 
@@ -137,5 +143,13 @@ données locale de comptes d'utilisateur
 `transport input ssh` : active le protocole SSH sur les lignes VTY. Cette configuration
 empêche le périphérique d’accepter des connexions autres que SSH.
 
+Sécurité port VLAN:
+```
+interface INTERFACE
+switchport port-security mac-address MACADDRESS violation shutdown
+
+```
+
+show port-security interface INTERFACE
 
 bastion (machine)
