@@ -1,7 +1,7 @@
 # Commandes Cisco
 
-Si l'OS est en K9, le ssh est supporté  
-
+Si l'OS est en K9, le ssh est supporté    
+voir ce qu'est un bastion (machine)  
 https://github.com/grplyler/cisco-cheatsheet 
 
 
@@ -21,6 +21,7 @@ NB: On peut copier coller l'intégralité d'une config d'un router
 `line console 0` : selectionne la console de l'équipement
 `password MDP` : lui attribut le MDP MDP
 
+`ip route NETWORK SUBNETMASK IP`
 
 `line vty 0 15` : selectionne les lignes VTY ensuite avec password on définit le MDP, login active la demande de MDP
 
@@ -150,6 +151,16 @@ switchport port-security mac-address MACADDRESS violation shutdown
 
 ```
 
+Afficher les infos:
 show port-security interface INTERFACE
 
-bastion (machine)
+Supprimer un parametre du port-security (par exemple une mac add):
+
+`no port-security mac-address MACADDRESS`
+
+
+`login block-for 60 attempts 2 within 60` : bloque la connexion pendant 60 secondes si 2 mdp érronés en 60 secondes
+
+
+
+

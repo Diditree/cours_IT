@@ -13,7 +13,7 @@ Chaque carte réseau à une MAC adresse unique, c'est ce qui permet d'identifier
 Les __vlan__ permettent de segmenter le réseau.  
 Les __vlan__ se configurent depuis les switch dits manageable.  
 Un switch basique ne connait pas les vlan.  
-Penser au mode __trunk__ entre les switch pour transporter des vlan d'un switch à un autre  
+Penser au mode __trunk__ entre les switch pour transporter des vlan d'un switch à un autre
 
 ## TCP/IP
 
@@ -145,7 +145,27 @@ On décalle le bit du masque ex:
  Un réseau /30 est un réseau dit "point à point" (il ne contient que 2ip pour les hotes)
 
 ## Routing
-<!-- TODO compléter pat et nat -->
+<!-- TODO compléter-->
+
+Distance administrative : La distance administrative permet de départager plusieurs sources de routage qui
+annonceraient une route menant à un même réseau de destination.  
+- __Statique__ : 1
+- __OSPF__ : 110 
+- __RIP__ : 120
+
+Protocoles de routages:  
+__RIP__ (choisi le moins de saut possible):
+- Basée sur le nombre de sauts
+- Chaque routeur traversé ajoute 1 saut
+- Limite de 15 sauts maximum autorisés
+
+__OSPF__ (là où la bande passante est la plus haute donc + rapide):
+- Basée sur la bande passante cumulé des interfaces de sortie
+- Les chemins à large bande passante ont une métrique faible
+- Les chemins à faible bande passante ont une métrique élevée
+
+
+
 __PAT__  :
 __NAT__  :
 
