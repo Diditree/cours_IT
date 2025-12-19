@@ -164,3 +164,58 @@ Supprimer un parametre du port-security (par exemple une mac add):
 
 
 
+## Routing Dynamique
+
+### RIP
+
+Transmet ses messages toute les 30 secondes  
+
+configurer sur un routeur le protocole RIP
+```
+router rip
+version 2
+network 192.168.10.0
+network 192.168.20.0
+```
+
+`router rip` : active le routage RIP
+``network X.X.X.X` : indique le réseau que le routeur annonce à ses voisins
+
+`debug ip rip` : active le debuggage
+
+`undebug all` : desactive tous les debug
+
+## Routage Inter VLAN
+
+### Router on a stick
+
+On peut créer des sous-interfaces sur les routers
+
+Configurer un __Router on a stick__
+
+Sur le __router__ :
+Créer une sous interface:
+`interface gigabitEthernet 0/0/0.10`
+
+Il faut activer l'encapsulation VLAN 802.1Q (permet de rajouter dans la trame ethernet l'id du VLAN):
+`encapsulation dot1q 10`
+10 = vlan id  
+
+
+Définir l'ip de la sous interface:
+`ip address 172.25.10.254 255.255.255.0`
+
+Ensuite selectionner l'interface et l'activer (ça permet d'activer les sous-interfaces sous-jacentes)
+```
+interface gigabitEthernet 0/0/0
+no shutdown
+```
+
+L’adresse IP de la sous interface fera office de passerelle par défaut pour les hôtes du VLAN correspondant
+
+Sur le switch:
+Activer le mode __trunk__ sur l'interface reliée au __router__
+```
+interface GigabitEthernet 0/1
+switchport mode trunk
+```

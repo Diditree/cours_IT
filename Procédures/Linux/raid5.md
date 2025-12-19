@@ -10,4 +10,4 @@ https://doc.ubuntu-fr.org/raid_logiciel
 - `sudo mdadm --daemonise /dev/md0` ou `mdadm --monitor --daemonize /dev/md0` : permet de lancer un monitoring du raid
 - `sudo mdadm --detail /dev/md0` : Si on souhaite des details sur le raid
 - `sudo mkfs.ext4 /dev/md0` : formater le raid 5 en ext4
-- `/dev/md0 	/srv ext4	defaults 	0	1` : dans fstab pour monter le raid au démarrage dans /srv
+- `UUID=aefc9c89-cc49-496d-8a23-8dbbecad9695	/srv ext4	defaults 	0	1` : dans fstab pour monter le raid au démarrage dans /srv

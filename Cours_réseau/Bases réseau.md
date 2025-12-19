@@ -1,5 +1,15 @@
 # Bases réseau 
 
+## Trame Ethernet
+
+| MAC dest | MAC source | Type | Données | FCS |
+
+- Mac destination
+- Mac source
+- Type (quel protocole de couche 3 ? IPv4, IPv6, ARP)
+- Les données (Paquet IP qui contient TCP/UDP, Données applicatives type HTTP, DNS, etc..)
+- FCS - Frame Check Sequence, vérifie si la trame est indemne avec un calcul appelé CRC, si le résultat est le même à la reception alors la trame est indemne  
+
 ## Switch (commutateur)
 
 Les switch sont capables de mémoriser les MAC adresses
