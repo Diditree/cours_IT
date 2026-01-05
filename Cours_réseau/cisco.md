@@ -219,3 +219,42 @@ Activer le mode __trunk__ sur l'interface reliée au __router__
 interface GigabitEthernet 0/1
 switchport mode trunk
 ```
+
+
+### Switch de couche 3
+
+Il faut créer les vlan et les configurer, la SVI sera la gateway par défaut des vlan par exemple
+
+```
+vlan 10
+vlan 20
+exit
+
+interface vlan 10
+description DG SVI du LAN 172.25.10.0/24
+ip address 172.25.10.254 255.255.255.0
+
+interface vlan 20
+description DG SVI du LAN 172.25.20.0/24
+ip address 172.25.20.254 255.255.255.0
+```
+
+On créer les vlan 10 et 20, on leur donne une ip address qui sera la default gateway de la vlan en question
+
+On configure les bonnes interfaces sur les bonnes vlan..
+```
+interface GigabitEthernet 1/0/2
+description Port d’accès de l’hôte A
+switchport mode access
+switchport access vlan 10
+
+interface GigabitEthernet 1/0/3
+description Port d’accès de l’hôte B
+switchport mode access
+switchport access vlan 20
+exit
+```
+
+
+__Il faut bien penser à activer le ROUTING sur le switch sinon le routage ne se fera pas entre les interfaces SVI__
+`ip routing`
