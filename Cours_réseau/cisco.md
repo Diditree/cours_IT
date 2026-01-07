@@ -18,7 +18,7 @@ NB: On peut copier coller l'intégralité d'une config d'un router
 `ip add x.x.x.x`
 `no sh` : active l'interface
 
-`line console 0` : selectionne la console de l'équipement
+`line console 0` : selectionne la console de l'équipement  
 `password MDP` : lui attribut le MDP MDP
 
 `ip route NETWORK SUBNETMASK IP`
@@ -31,6 +31,7 @@ NB: On peut copier coller l'intégralité d'une config d'un router
 
 `show running-conf`
 
+`show ip interface`
 
 `banner motd`
 `banner login` ssh
@@ -121,8 +122,7 @@ Configurer le ssh sur le switch
 ```
 conf t
 ip domain-name nomDuDomaine
-crypto key generate rsa general-keys modulus
-2048
+crypto key generate rsa general-keys modulus 2048
 ip ssh version 2
 username NAME secret PASSWORD
 line vty 0 15
