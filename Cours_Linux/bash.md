@@ -33,6 +33,8 @@ sayHello() {
 sayHello
 ```
 
+veryQuickMaths()
+
 Pour prendre des arguments dans la fonction :
 
 ```bash

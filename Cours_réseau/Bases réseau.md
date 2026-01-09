@@ -204,6 +204,8 @@ le masque en bits : 11111111.11111111.11111111.11100000 (255.255.255.224)
 
 Maintenant pour savoir la taille d'un sous réseaux il suffit de faire 256 - 224 = 32 , donc chaque sous-réseau démarre tous les 32 dans le dernier octet.
 
+OU 256 / 2Nx
+
 |    # | Adresse réseau    | Première utilisable | Dernière utilisable | Broadcast      |
 | ---: | :---------------- | :------------------ | :------------------ | :------------- |
 |    1 | 192.168.10.0/27   | 192.168.10.1        | 192.168.10.30       | 192.168.10.31  |
