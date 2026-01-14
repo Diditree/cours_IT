@@ -33,7 +33,7 @@ lancer une commande en /safe = mode sans echec
 - `fsmgmt.msc` : Dossiers partagés
 - `mstsc` : connexion à distance
 - `devmgmt.msc` : gestionnaire de périphériques
-
+- `dsa.msc` : gestionnaire USER et PC de l'AD
 ## Raccourcis clavier
 
 Win + i

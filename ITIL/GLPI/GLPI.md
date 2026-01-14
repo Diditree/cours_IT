@@ -1,1 +1,1 @@
-GLPI est un CMS 
+GLPI est un CMS
