@@ -29,7 +29,6 @@ lancer une commande en /safe = mode sans echec
 - `wf.msc` : firewall  
 - `lusrmgr.msc` : gestion des utilisateurs et groupes locaux
 - `mmc` : console
-- `compmgmt.msc` : gestion du pc  
 - `secpol.msc` : Stratégie de sécurité locale  
 - `fsmgmt.msc` : Dossiers partagés
 - `mstsc` : connexion à distance
