@@ -16,6 +16,7 @@
 - `gpresult /x` : générer un rapport
 
 ## Executer (w+r)
+
 lancer une commande en /safe = mode sans echec  
 
 - `diskmgmt.msc` : console des disques stockages  
@@ -34,6 +35,13 @@ lancer une commande en /safe = mode sans echec
 - `mstsc` : connexion à distance
 - `devmgmt.msc` : gestionnaire de périphériques
 - `dsa.msc` : gestionnaire USER et PC de l'AD
+- `gpmc.msc` : ouvrir la gestion des GPO dans l'ad
+
+
+
+
+
+
 ## Raccourcis clavier
 
 Win + i
