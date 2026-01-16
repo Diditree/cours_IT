@@ -14,6 +14,7 @@
 - `net localgroup` (net help localgroup)
 - `whoami /user` : pour voir le SID  
 - `gpresult /x` : générer un rapport
+-  `gpupdate /force` : update des GPO  
 
 ## Executer (w+r)
 
@@ -35,7 +36,7 @@ lancer une commande en /safe = mode sans echec
 - `devmgmt.msc` : gestionnaire de périphériques
 - `dsa.msc` : gestionnaire USER et PC de l'AD
 - `gpmc.msc` : ouvrir la gestion des GPO dans l'ad
-
+- `regedit` : base de registre
 
 
 
