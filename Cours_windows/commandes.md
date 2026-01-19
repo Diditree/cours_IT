@@ -25,9 +25,9 @@ lancer une commande en /safe = mode sans echec
 - `ncpa.cpl` : réseaux
 - `compmgmt.msc` : ouvre le gestionnaire d'ordinateur
 - `msfinfo32` : info sys
-- `services.msc`  
-- `firewall.cpl`  
-- `wf.msc` : firewall  
+- `services.msc` : ouvre les services
+- `firewall.cpl` :
+- `wf.msc` : gestion du firewall  
 - `lusrmgr.msc` : gestion des utilisateurs et groupes locaux
 - `mmc` : console
 - `secpol.msc` : Stratégie de sécurité locale  
