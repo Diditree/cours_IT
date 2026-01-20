@@ -258,3 +258,39 @@ exit
 
 __Il faut bien penser à activer le ROUTING sur le switch sinon le routage ne se fera pas entre les interfaces SVI__
 `ip routing`
+
+
+Configurer un NAT :
+
+```
+enable
+configure terminal
+interface GigabitEthernet2
+ip nat inside
+exit
+interface GigabitEthernet1
+ip nat outside
+exit
+access-list 1 permit 192.168.0.0 0.0.0.255
+ip nat inside source list 1 interface GigabitEthernet1 overload
+```
+inside = G2
+outside = G1
+
+
+Suppression d'un NAT :
+
+```
+enable
+clear ip nat translation *
+configure terminal
+no ip nat inside source list 1 interface gigabitEthernet1 overload
+interface GigabitEthernet1
+no ip nat outside
+exit
+interface GigabitEthernet2
+no ip nat inside
+exit
+no access-list 1
+```
+
