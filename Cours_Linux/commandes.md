@@ -68,7 +68,8 @@ jobs # permet de voir/gérer les processus en arrière plan
 # -l 
 
 
-sudo shutdown
+sudo shutdown #
+# -r 0 permet de reboot instant la machine
 
 
 whoami

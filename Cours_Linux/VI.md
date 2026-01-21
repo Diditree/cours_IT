@@ -9,6 +9,11 @@ set tabstop=4
 
 ## Cheatsheet
 
+```bash
+:wq # save and quit
+:q! # quits no saving
+
+```
 
 ## ??
 
