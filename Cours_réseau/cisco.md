@@ -294,3 +294,12 @@ exit
 no access-list 1
 ```
 
+
+Activation du relais DHCP 
+
+```
+enable
+configure terminal
+interface GigabitEthernet2
+ip helper-address IPServeurDHCP
+```
