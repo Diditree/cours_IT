@@ -6,7 +6,7 @@
 - `route` : permet de gérer la table de routage  
 - `arp -a` : table liée au cache ARP  
 - `netstat` : liste les ports ouverts  
-- `ipconfig` 
+- `ipconfig` : 
 - `dir` : ls
 - `more` : cat
 - `diskpart` : disques de stockage depuis cmd (commandes liées : ?,help,list,select)  
