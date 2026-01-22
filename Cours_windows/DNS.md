@@ -10,7 +10,7 @@ Deux types de requêtes peuvent être adressés à un serveur DNS :
 La redirection permet de décharger notre serveur DNS vers un autre  
 
 - redirection non conditionnelle : redirige les requetes DNS vers un dns qu'on a indiqué (dns fai, dns google,...)
-- redirection conditionnelle : redirige les requetes DNS vers un redirecteur ciblés (1 redirecteur pour un domaine spécifique par exemple)  
+- redirection conditionnelle : redirige les requetes DNS vers un redirecteur ciblé (1 redirecteur pour un domaine spécifique par exemple)  
 
 
 ## Fichier HOSTS
