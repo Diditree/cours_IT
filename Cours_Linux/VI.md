@@ -1,6 +1,10 @@
 # Notes liées à VI
 
-## /.vimrc
+Sources utiles:
+https://blog.stephane-robert.info/docs/admin-serveurs/linux/vim/
+
+
+## ~/.vimrc
 ```bash
 set nocompatible
 set number
