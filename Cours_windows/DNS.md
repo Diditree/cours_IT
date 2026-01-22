@@ -23,7 +23,36 @@ chemin :  C:\Windows\System32\drivers\etc\hosts
 
 ## DNS Hébergeur
 
-xdxdxdx
+Un dns qui fait __autorité__ sur une zone est un DNS qui gère cette zone  
+
+Fichier par défaut d'une zone(__Fichier de zone__) :  `%windir%\system32\dns`  
+
+### Les zones
+
+- __Zone direte__ : résout un nom en ip  
+- __Zone inverse__ : résout une ip en nom
+
+Sur ces zones les serveurs peuvent être __serveur principal__ ou __serveur secondaire__
+
+Pour le __serveur principal__ l'accès est en __lecture__ et __écriture__  
+Pour le __serveur secondaire__ l'accès est seulement en __lecture__  
+
+Dans les 2 cas le serveur fait autorité sur la zone  
+
+Les différents types d'enregistrements :  
+Dans les zones directes :  
+- __SOA__ (Start Of Authority) : nom FQDN du serveur DNS disposant de la zone en écriture  
+- __NS__ (Name Server) : serveur(s) faisant autorité pour la zone  
+- __A__ : Hôte IPv4
+- __AAAA__ : Hôte IPv6
+- __CNAME__ : Alias
+- __MX__ : Messagerie  
+  
+Dans les zones inverses :   
+- __SRV__ : Services
+- __PTR__ : Pointeur
+- __SOA__
+
 
 ## Notes
 
