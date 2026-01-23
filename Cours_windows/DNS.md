@@ -54,6 +54,12 @@ Dans les zones inverses :
 - __SOA__
 
 
+## Les mises à jour
+
+Transfert de zone  
+
+Astuce pour le nslookup : server x.x.x.x pour changer le target
+
 ## Notes
 
 RFCs DNS  
