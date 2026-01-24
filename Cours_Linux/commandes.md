@@ -1,4 +1,4 @@
-## Cheatsheet de commandes Linux
+# Cheatsheet de commandes Linux
 On peut écrire pluseurs commandes sur une seule ligne avec le séparateur `;` : `who; ps -f` (ou &&)   
 
 On peut regrouper les commandes avec des () : `(who; ps aux) >> fichier.txt`  
