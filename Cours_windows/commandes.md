@@ -14,11 +14,12 @@
 - `net localgroup` (net help localgroup)
 - `whoami /user` : pour voir le SID  
 - `gpresult /x` : générer un rapport
--  `gpupdate /force` : update des GPO  
+- `gpupdate /force` : update des GPO  
 
 ## Executer (w+r)
 
-lancer une commande en /safe = mode sans echec  
+lancer une commande en /safe = mode sans echec    
+mgmt = management   
 
 - `diskmgmt.msc` : console des disques stockages  
 - `sysdm.cpl` : renommer pc, ajout du domaine  
@@ -37,6 +38,8 @@ lancer une commande en /safe = mode sans echec
 - `dsa.msc` : gestionnaire USER et PC de l'AD
 - `gpmc.msc` : ouvrir la gestion des GPO dans l'ad
 - `regedit` : base de registre
+- `dnsmgmt.msc` : gestionnaire DNS
+- `dhcpmgmt.msc` : gestionnaire DHCP
 
 
 
@@ -44,4 +47,4 @@ lancer une commande en /safe = mode sans echec
 
 ## Raccourcis clavier
 
-Win + i
+Win + i : Paramètres windows

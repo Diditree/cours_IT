@@ -11,7 +11,7 @@ https://wiki.debian.org/SourcesList
 
 chaque commande de paquets à ses logs :  
 - apt-get et apt : fichier /var/log/apt/history.log   
-- dpkg : fichier /var/log/dpkg.log  
+- dpkg : fichier /var/log/dpkg.log
 
 `dpkg -L <paquet>`
 `apt show <paquet>`  
