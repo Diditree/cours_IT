@@ -68,9 +68,12 @@ jobs # permet de voir/gérer les processus en arrière plan
 # -l 
 
 
-sudo shutdown #
+sudo shutdown # arrete/redémarre le système propremeent
 # -r 0 permet de reboot instant la machine
 
+halt # arrête le système en tuant les processus en cours et sans avertir personne
+poweroff #
+reboot #
 
 whoami
 
