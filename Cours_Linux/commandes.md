@@ -79,7 +79,13 @@ whoami
 
 hostnamectl
 
+lsb_release
+
+arch
+
 uptime
+
+uname
 
 free -h # affiche la ram utilisée et disponible
 

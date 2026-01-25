@@ -1,8 +1,6 @@
-# Commandes TO DO
+# Navigation dans le système de fichiers
 
-## Navigation dans le système de fichiers
-
-### ls
+## ls
 
 Liste les fichiers et dossiers
 
@@ -21,7 +19,7 @@ Les principales options à connaitre :
 - `-t` : Trie la sortie par date et non par ordre alphabétique.
 - `-c` : Trie sur la date de changement de statuts des fichiers.
 
-### pwd (print working directory)  
+## pwd (print working directory)  
 
 Affiche le repo dans lequel on se situe
 
@@ -29,14 +27,14 @@ Affiche le repo dans lequel on se situe
 pwd
 ```
 
-### cd
+## cd
 
 Change Directory
 ```bash
 cd
 ```
 
-### cp
+## cp
 
 Copie des fichiers/dossiers d'un remplacement à un autre
 
@@ -50,7 +48,7 @@ Les principales options à connaitre :
 - `-p` : Copie avec préservation des droits, des propriétés (groupe et utilisateur) et de l’horodatage.
 - `-r` : Copie récursive, c’est-à-dire avec tous les fichiers présents dans un répertoire.
 
-### mv
+## mv
 
 Déplace ou renomme un fichier/dossier
 
@@ -67,7 +65,7 @@ Les principales options à connaitre :
 - `-n` : Ne remplace pas / n’écrase pas les fichiers existants
 
 
-### rm
+## rm
 
 Supprime des fichiers/dossiers 
 
@@ -84,7 +82,7 @@ Les principales options à connaitre :
 - `-f` : N'affiche aucun prompt
 - `-r` : destruction récursive (tous les répertoires contenus dans le dossier)
 
-### mkdir
+## mkdir
 
 Créer un nouveau répertoire
 
@@ -96,7 +94,7 @@ Les principales options à connaitre :
 - `-p` : Créer des répertoires récursivement 
 - `-m` : permet d'attribuer les droits au moment de la création du répertoire
 
-### chmod
+## chmod
 
 Modifie les permissions d'un fichier ou d'un répertoire
 
@@ -110,7 +108,7 @@ Les principales options à connaitre :
 - `-R` : modification récursive (tous les droits de tous les répertoires et fichiers contenus dans le dossier)
 - `-f` : n’affiche aucun prompt
 
-### chown
+## chown
 
 Modifie le propriétaire d'un ficher/dossier
 
@@ -125,13 +123,13 @@ Les principales options à connaitre :
 - `-R` : modification récursive (tous les droits de tous les répertoires et fichiers contenus dans le dossier)
 - `-f` : n’affiche aucun prompt
 
-### chgrp
+## chgrp
 
 Change le groupe associé à un fichier ou un dossier
 
-## Visualisation de fichiers
+# Visualisation de fichiers
 
-### cat
+## cat
 
 Affiche le contenu d'un fichier sans pagination
 
@@ -146,7 +144,7 @@ Les principales options à connaitre :
 - `-n` : Affiche les numéros de ligne
 - `-v` : Affiche les caractères non imprimable
 
-### less
+## less
 
 Affiche le contenu d'un fichier avec pagination
 
@@ -154,7 +152,7 @@ Affiche le contenu d'un fichier avec pagination
 less fichier.txt
 ```
 
-### head et tail
+## head et tail
 
 Affiche les premières ou dernières lignes d'un fichier (par défaut 10)
 
@@ -163,9 +161,9 @@ head -n 20 fichier.txt
 tail -n 5 fichier.log
 ```
 
-## Recherche de fichiers et de dossiers
+# Recherche de fichiers et de dossiers
 
-### find
+## find
 Premet de rechercher des fichiers/dossiers dans le système de fichiers
 
 ```bash
@@ -179,7 +177,7 @@ find . -type d -empty # cherche repos vides
 find . -name "*.tmp" -exec rm {} \; # remove tous les fichiers avec l'extension .tmp
 ```
 
-### grep
+## grep
 
 Permet de rechercher des informations dans un fichier texte ou à la sortie d'autres commandes
 
@@ -193,3 +191,99 @@ grep -i "^Erreur" fichier.txt
 
 Les principales options à connaitre :
 - `-n` : Affiche les numéros de ligne
+
+# Processus
+
+## ps
+
+Affiche une liste statique des processus actifs
+
+```bash
+ps aux
+```
+
+## top / htop(si installer)
+
+https://blog.stephane-robert.info/docs/outils/systeme/htop/
+
+```bash
+top
+htop
+```
+
+Affiche en temps réel les processus actifs
+
+## nice / renice
+
+TODO
+
+## bg
+
+Reprend un processus en arrière plan
+
+```bash
+bg
+```
+
+## fg
+
+Reprend un processus en premier plan
+
+```bash
+fg
+```
+
+## jobs
+
+Montre les processus du shell courant
+
+```bash
+jobs
+```
+
+## kill
+
+Arrête un processus
+
+```bash
+kill -9 [PID]
+killall firefox
+```
+
+`-l` : affiche les signaux disponibles
+
+## pstree
+
+(paquet `psmisc`)
+
+Affiche les processus sous forme d'arbre en montrant les relations parent - enfants
+
+```bash
+pstree
+```
+
+## lsof
+
+Permet de connaitre l’activité des fichiers ouverts dans un répertoire donné  
+Il est possible de lister des processus utilisant un port
+
+```bash
+lsof -p [PID]
+lsof -i :80
+```
+
+## strace
+
+TODO 
+```bash
+strace -p [PID]
+```
+
+# Gestion de la mémoire
+
+## free
+Montre la mémoire
+
+```bash
+free -h
+```
