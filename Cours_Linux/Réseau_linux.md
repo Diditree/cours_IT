@@ -34,6 +34,12 @@ lo = loopback 127.0.0.1
 
 `/etc/resolv.conf`
 
+
+`nameserver X.X.X.X`
+
+ou dans `/etc/network/interfaces`   
+
+`dns-nameservers 1.1.1.1 8.8.8.8`
 ## DHCP
 
 `/etc/network/interfaces`  
