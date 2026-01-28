@@ -77,7 +77,9 @@ reboot #
 
 whoami
 
-hostnamectl
+hostnamectl # affiche le hostname
+# Pour configurer un nouveau hostname : hostnamectl set-hostname nouveau_nom_d'hôte  
+
 
 lsb_release
 
@@ -149,6 +151,8 @@ head
 less
 
 du -sh # Totaliser l'occupation du périphérique pour l'ensemble des fichiers, récursivement pour les repertoires -h pour humain readable et -s pour summarize
+
+scp identifiant@IP_du_serveur:/etc/eniconf.cfg /tmp # copier un fichier en ssh 
 
 
 ```
