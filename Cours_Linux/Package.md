@@ -21,7 +21,7 @@ chaque commande de paquets à ses logs :
 
 
 
-
-deb http://security.debian.org/debian-security bookworm-security main 
-deb http://ftp.fr.debian.org/debian/ bookworm main 
-deb http://ftp.fr.debian.org/debian/ bookworm-updates main 
+DEB12 :  
+deb http://security.debian.org/debian-security bookworm-security main
+deb http://ftp.fr.debian.org/debian/ bookworm main
+deb http://ftp.fr.debian.org/debian/ bookworm-updates main
