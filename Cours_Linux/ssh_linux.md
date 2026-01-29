@@ -1,4 +1,5 @@
 # SSH sur Linux  
+fichier de conf : `ssh/sshd_config.f/*conf`  
 
 Pour plus d'infos : https://www.ssh.com/academy/ssh  
 

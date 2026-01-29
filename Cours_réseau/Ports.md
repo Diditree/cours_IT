@@ -4,4 +4,4 @@
 80 = HTTP
 389 = LDAP
 636 = LDAPs
-53 = DNS
+53 = DNS / UDP
