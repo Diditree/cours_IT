@@ -8,7 +8,8 @@ https://blog.stephane-robert.info/docs/admin-serveurs/linux/vim/
 ```bash
 set nocompatible
 set number
-set tabstop=4
+set tabstop=2
+syntax on
 ```
 
 ## Cheatsheet
