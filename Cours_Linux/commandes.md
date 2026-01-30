@@ -5,6 +5,10 @@ On peut regrouper les commandes avec des () : `(who; ps aux) >> fichier.txt`
 
 ```bash
 
+find / -size 33c -user bandit7 -group bandit6 2> /dev/null -exec cat {} \; # redirige le resultat de find dans cat tout en supprimant les erreurs
+
+sort data.txt | uniq -u # trie toutes les lignes puis n'affiche que les lignes qui ne sont pas en doublons
+
 which # localiser le repo d'une commande
 
 !! #permet de re écrire la dernière commande (sudo !! , retape la dernière commande avec sudo)#
