@@ -3,9 +3,9 @@
 `isc-dhcp-server` : service serveur dhcp  
 `isc-dhcp-relay` : service dhcp relay
 
-lancer le dhcp-server en __debug__ avec le binaire : `dhcpd –d`   
+lancer le dhcp-server en __debug__ avec le binaire : `dhcpd -4 -d -cf /etc/dhcp/dhcpd.conf -f` ou `dhcpd -d`
 
-lancer le dhcp-relay en __debug__ avec le binaire : `dhcprelay -4 –d` 
+lancer le dhcp-relay en __debug__ avec le binaire : `dhcrelay -4 -d -i ens32 -i INTERFACE -i INTERFACE X.X.X.X` : peut permettre de voir en temps réel les logs
 
 # Configuration d'un serveur dhcp
 
