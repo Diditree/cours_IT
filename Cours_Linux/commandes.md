@@ -63,6 +63,9 @@ ps -f
 # aux (pour voir le proc/memoire)
 # ps -o pcpu,pmem,cmd (affiche le cpu utilisé, mémoire utilisée, et la commande)
 # -e affiche tous les processus
+ps -f | grep dhcp  
+
+
 
 jobs # permet de voir/gérer les processus en arrière plan
 # -l 
