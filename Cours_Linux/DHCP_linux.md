@@ -11,7 +11,9 @@ lancer le dhcp-relay en __debug__ avec le binaire : `dhcrelay -4 -d -i ens32 -i 
 
 Path de la conf : `/etc/dhcp/dhcpd.conf` 
 
-/etc/default/isc-dhcp-server
+Préciser l'interface sur laquelle le serveur doit écouter : `/etc/default/isc-dhcp-server`
+
+enp0s3
 /etc/dhcp/dhcpd.con
 
 
