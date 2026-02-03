@@ -47,7 +47,8 @@ Dans les zones directes :
 - __AAAA__ : Hôte IPv6
 - __CNAME__ : Alias
 - __MX__ : Messagerie  
-  
+- __SRV__ : Services (Emplacement du service) : Spécifie un port pour des services spécifiques , [0][100][88] , 0 priorité, 100 poids, sur le port 88,  le poids départage à priorité égale  
+
 Dans les zones inverses :   
 - __SRV__ : Services
 - __PTR__ : Pointeur
