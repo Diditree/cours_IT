@@ -40,3 +40,13 @@ Utilisateur :
 
 www.pingcastle.com : permet de faire un audit de l'annuaire AD  
 GPO bitlocker
+
+
+# AGDLP  
+
+Bonnes pratiques :  
+- Créer une UO qui va contenir les postes serveurs et les postes clients
+- Créer une UO qui va contenir tous les services de la société, par exemple: une UO "Service" qui va contenir une UO "Comptabilité", "Production", "Direction"..., ces UO vont contenir les utilisateurs de ces services  
+- Créer une OU pour les GG (Groupe Global) et les DL (groupe Domain Local)
+- 1 GG = 4 DL pour les droits (DL_XX_Lecture,DL_XX_Modification,DL_XX_CT,DL_XX_Refus )
+- On donne des droits à des DL dans lesquels sont membres des GG qui users
