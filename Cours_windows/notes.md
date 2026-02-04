@@ -20,10 +20,3 @@ swap sur windows :
 - avancé
 
 driver/etc/hosts > protocoles connus de windows
-
-
-
-
-
-## Poireau
-poirozaezae
