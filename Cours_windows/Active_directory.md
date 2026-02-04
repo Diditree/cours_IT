@@ -1,5 +1,10 @@
 # Active Directory
 
+
+__SYSVOL__ Windows\SYSVOL\sysvol : endroit où l'on peut constater la synchronisation entre deux DC    
+ 
+
+
 _source ENI :  Windows Server 2022
 - Les bases indispensables pour administrer et configurer votre serveur_
 
