@@ -11,7 +11,8 @@
 
 #
 
-`/etc/bind/named.conf.options` : configurer un DNS resolveur/une redirection inconditionnelle
+`/etc/bind/named.conf.options` : configurer un DNS resolveur/une redirection inconditionnelle, on y configure aussi les options  
+Autoriser les recursions pour un DNS secondaire  
 
 
 exemple de conf:  
@@ -119,6 +120,6 @@ relatifs à la zone
 254 PTR gw42.infra.eni.
 ```
 
-1,2,13,254 sont le dernier octer de l'adresse IP  
+1,2,13,254 sont le dernier octet de l'adresse IP  
 
 
