@@ -40,7 +40,7 @@ mgmt = management
 - `regedit` : base de registre
 - `dnsmgmt.msc` : gestionnaire DNS
 - `dhcpmgmt.msc` : gestionnaire DHCP
-
+- `ms-settings:optionalfeatures` : ouvre les options falcutatives
 
 
 
