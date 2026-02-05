@@ -54,4 +54,10 @@ Bonnes pratiques :
 - Créer une UO qui va contenir tous les services de la société, par exemple: une UO "Service" qui va contenir une UO "Comptabilité", "Production", "Direction"..., ces UO vont contenir les utilisateurs de ces services  
 - Créer une OU pour les GG (Groupe Global) et les DL (groupe Domain Local)
 - 1 GG = 4 DL pour les droits (DL_XX_Lecture,DL_XX_Modification,DL_XX_CT,DL_XX_Refus )
-- On donne des droits à des DL dans lesquels sont membres des GG qui users
+- On donne des droits à des DL dans lesquels sont membres des GG qui users  
+
+Exemple d'un fichier de partage "Comptabilité" en accès "Modification" pour le service Direction et Comptabilité :
+
+- Un service Direction et un service Comptabilité.  
+- On créer 4 __DL__ pour le fichier partagé Comptabilité DL_Comptabilite_XX  
+- On Ajoute à la DL DL_Comptabilite_Modification GG_Comptabilite et GG_Direction
