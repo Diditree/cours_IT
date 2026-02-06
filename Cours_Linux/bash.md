@@ -12,8 +12,24 @@ Indiquer au début d'un script bash permet à la machine de savoir qu'elle doit 
 nomDeVariable=$"variable string"
 nomDeVariable=$1
 
-local variableLocal = "test" # permet de déclarer une variable dans un scope(fonction)
+local variableLocal="test" # permet de déclarer une variable dans un scope(fonction)
 ```
+
+On peut déclarer des variables avec des types grâce aux mots clés `declare` et/ou `typeset`  
+
+```bash
+declare [OPTION] variable=valeur
+```
+`-r -i -a -f -x`
+
+
+`local` déclare la variable dans le __scope__ , sans `local` il est déclaré dans l'intégralité du script  
+
+une expression arithmétique invalide sans erreur est égale à 0 :   
+```bash
+declare -i x="hello"
+``` 
+est égal à 0
 
 ## Conditions
 ```bash
