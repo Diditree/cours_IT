@@ -1,5 +1,8 @@
 # Notes bash
 
+Penser à rendre le `.sh` executable  
+
+
 Indiquer au début d'un script bash permet à la machine de savoir qu'elle doit executer le script dans un environnement bash
 
 ```bash
