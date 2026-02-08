@@ -17,7 +17,8 @@ syntax on
 ```bash
 :wq # save and quit
 :q! # quits no saving
-
+yy # copier
+p # coller
 ```
 
 ## ??
