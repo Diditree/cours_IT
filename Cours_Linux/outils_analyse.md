@@ -46,7 +46,11 @@ Envoi de signaux à des processus
 kill PID
 kill -N°Signal PID
 ```
+### Ports
 
+```bash
+ss -tuln
+```
 
 ### Systèmes de fichiers (disque)
 
