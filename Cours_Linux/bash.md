@@ -7,10 +7,15 @@ Indiquer au début d'un script bash permet à la machine de savoir qu'elle doit 
 
 `$?` : code retour de la dernière commande executée , si 0 commande réussie sinon erreur  
 
+
+She bang :  
 ```bash
 #!/usr/bin/env bash
 ```
+## Debug
 
+Rajouter `+`
+ex : `+ echo "blabla"`
 
 ## Déclarer des variables
 ```bash
