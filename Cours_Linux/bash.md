@@ -1,5 +1,8 @@
 # Notes bash
 
+voir sous-shell
+
+
 Penser à rendre le `.sh` executable : `chmod u+x`  
 Pour executer un script : `./nom_du_script` ou `bash nom_du_script`  
 
@@ -9,6 +12,8 @@ Indiquer au début d'un script bash permet à la machine de savoir qu'elle doit 
 
 
 `env` : permet d'afficher les variables d'environnement
+
+`$#` : comptabilise le nombre d'argument
 
 She bang :  
 ```bash
