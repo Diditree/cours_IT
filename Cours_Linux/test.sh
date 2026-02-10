@@ -1,16 +1,18 @@
-1 #!/usr/bin/env bash
-  2 
-  3 if (($# > 1)); then
-  4     echo "synthaxe"
-  5 #   exit 1
-  6 elif [[-z $1]]; then
-  7 # read -p "Votre nom : " user
-  8 # if [[-z $user]]; then
-  9 #   user="invité"
- 10 #elif [[$1 == "root"]]; then
- 11 # echo "compte root"
- 12 # exit 4
- 13 fi
- 14 
- 15 #echo "cc $user"
-~                       
+#!/bin/bash
+if (( $# > 1 )); then
+    echo "syntaxe"
+    exit 1
+fi
+if (($# == 0 )); then
+    read -p "Veuillez entrer votre prénom : " prenom
+    if [ -z "$user" ]; then
+        user="invité"
+    fi
+else
+    user="$1"
+fi
+
+if [[ "$user" = "root" ]]; then
+    echo "root"
+    exit 4
+fi
