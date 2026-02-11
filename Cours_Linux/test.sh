@@ -1,18 +1,31 @@
 #!/bin/bash
-if (( $# > 1 )); then
-    echo "syntaxe"
-    exit 1
-fi
-if (($# == 0 )); then
-    read -p "Veuillez entrer votre prénom : " prenom
-    if [ -z "$user" ]; then
-        user="invité"
-    fi
-else
-    user="$1"
-fi
 
-if [[ "$user" = "root" ]]; then
-    echo "root"
-    exit 4
-fi
+echo "--- Début du script ---"
+
+echo "---"
+echo "M -> Voir le processeur "
+echo "E -> Voir les disques"
+echo "R -> Voir les dossiers"
+echo "Q -> Quitter"
+echo "---"
+read -p "Entrez votre choix : " choice
+
+case $choice in
+
+q|Q) exit ;;
+r|R) du-hs /* ;;
+p|P) dpkg --get-selections | wc -l ;;
+e|E) df -h ;;
+m|M) read -p "CPU ou PCI ? " answer
+  case $answer in
+  CPU) lscpu;;
+  PCI) lspci;;
+  *);;
+esac
+;;
+*) echo "Erreur de synthaxe"
+  exit2 ;;
+
+esac
+
+echo "--- Fin du script ---"
