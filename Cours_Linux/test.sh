@@ -1,31 +1,25 @@
 #!/bin/bash
 
-echo "--- Début du script ---"
+file=$1
 
-echo "---"
-echo "M -> Voir le processeur "
-echo "E -> Voir les disques"
-echo "R -> Voir les dossiers"
-echo "Q -> Quitter"
-echo "---"
-read -p "Entrez votre choix : " choice
+if [[ -z $file ]]; then
+  read -p "Indiquez le fichier à parcourir : " file
+fi
 
-case $choice in
+if (($# > 1)); then
+  echo "Saisissez un fichier à parcourir à la suite de la commande"
+  echo "exemple : tmp"
+  exit 1
+fi
 
-q|Q) exit ;;
-r|R) du-hs /* ;;
-p|P) dpkg --get-selections | wc -l ;;
-e|E) df -h ;;
-m|M) read -p "CPU ou PCI ? " answer
-  case $answer in
-  CPU) lscpu;;
-  PCI) lspci;;
-  *);;
-esac
-;;
-*) echo "Erreur de synthaxe"
-  exit2 ;;
+if [[ -n $file ]]; then
+  totalFiles=$(ls ${file} | wc -l)
+  echo $totalFiles
+  for i in $file; do
+    sh=$(ls /${file}/*.sh | wc -l) && echo "Il y a ${sh} fichiers .sh" && pourcentage $file $totalFiles
+    odt=$(ls /${file}/*.odt | wc -l) && echo "Il y a ${odt} fichiers .odt"
+    txt=$(ls /${file}/*.txt | wc -l) && echo "Il y a ${txt} fichiers .txt"
+  done
+fi
 
-esac
 
-echo "--- Fin du script ---"
