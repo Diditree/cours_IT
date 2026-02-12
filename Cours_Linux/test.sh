@@ -1,25 +1,45 @@
 #!/bin/bash
 
-file=$1
-
-if [[ -z $file ]]; then
-  read -p "Indiquez le fichier à parcourir : " file
+# ===== Vérification des arguments =====
+if (( $# > 1 )); then
+    echo "Utilisation : $0 [dossier]"
+    exit 1
 fi
 
-if (($# > 1)); then
-  echo "Saisissez un fichier à parcourir à la suite de la commande"
-  echo "exemple : tmp"
-  exit 1
+# Si aucun argument → saisie
+if [[ -z "$1" ]]; then
+    read -p "Indiquez le dossier à parcourir : " dossier
+else
+    dossier="$1"
 fi
 
-if [[ -n $file ]]; then
-  totalFiles=$(ls ${file} | wc -l)
-  echo $totalFiles
-  for i in $file; do
-    sh=$(ls /${file}/*.sh | wc -l) && echo "Il y a ${sh} fichiers .sh" && pourcentage $file $totalFiles
-    odt=$(ls /${file}/*.odt | wc -l) && echo "Il y a ${odt} fichiers .odt"
-    txt=$(ls /${file}/*.txt | wc -l) && echo "Il y a ${txt} fichiers .txt"
-  done
+# Vérifier que le dossier existe
+if [[ ! -d "$dossier" ]]; then
+    echo "Erreur : $dossier n'est pas un dossier valide."
+    exit 1
 fi
 
+# ===== Compter tous les fichiers =====
+totalFiles=$(find "$dossier" -maxdepth 1 -type f | wc -l)
 
+echo "Nombre total de fichiers dans $dossier : $totalFiles"
+echo "-------------------"
+
+# ===== Boucle sur les extensions =====
+for ext in sh txt odt
+do
+    echo "Extension : .$ext"
+    echo "-------------------"
+
+    count=$(find "$dossier" -maxdepth 1 -type f -name "*.$ext" | wc -l)
+
+    echo "-> $count fichiers"
+
+    # Calcul du pourcentage (si total > 0)
+    if (( totalFiles > 0 )); then
+        percent=$(( count * 100 / totalFiles ))
+        echo "Soit $percent% des fichiers contenus dans le dossier"
+    fi
+
+    echo "-------------------"
+done
