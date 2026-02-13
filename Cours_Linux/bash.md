@@ -73,6 +73,14 @@ fi
 ```
 
 ## Fonction
+
+On peut sourcer dans un fichier pour acceder aux fonctions  
+
+```bash
+source chemin
+. chemin
+```
+  
 ```bash
 sayHello() {
     echo "Cc"
