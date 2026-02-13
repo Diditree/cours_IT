@@ -5,3 +5,4 @@
 389 = LDAP
 636 = LDAPs
 53 = DNS / UDP
+3128 = proxy

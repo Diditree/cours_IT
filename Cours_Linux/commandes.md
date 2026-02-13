@@ -3,6 +3,9 @@ On peut écrire pluseurs commandes sur une seule ligne avec le séparateur `;` :
 
 On peut regrouper les commandes avec des () : `(who; ps aux) >> fichier.txt`  
 
+`env` : permet d'afficher les variables d'environnement
+
+
 ```bash
 
 find / -size 33c -user bandit7 -group bandit6 2> /dev/null -exec cat {} \; # redirige le resultat de find dans cat tout en supprimant les erreurs

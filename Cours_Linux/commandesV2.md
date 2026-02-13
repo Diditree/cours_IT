@@ -1,3 +1,13 @@
+## awk
+
+
+
+```bash
+awk -F "," 'NR > 1 && $5 == "France" {print $2}' users.csv
+```
+
+
+
 # Navigation dans le système de fichiers
 
 ## ls

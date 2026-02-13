@@ -16,7 +16,7 @@ les mdps sont stockés dans `/etc/shadow`
 `/etc/login.defs` : autres options par défaut pour `user add`
 
 ```bash
-user # useradd nomDuUser -u UID -g Groupe principal -G Groupes secondaires -c "commentaire" -md(m=makeDir d=chemin) /home/loginDuUser -s(shell) /bin/sh
+user # useradd nomDuUser -u UID -g Groupe principal -G Groupes secondaires -c "commentaire" -md(m=makeDir d=chemin) /home/loginDuUser -s(shell) /bin/bash
 
      # usermod (mêmes options)
 
