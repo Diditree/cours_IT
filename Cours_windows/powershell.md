@@ -4,6 +4,23 @@ Ctrl + espace pour voir toutes les options d'une commande
 
 `Update-help -SourcePath \\chemin\vers\aide\PowerShell -UIculture en-US -credential <login>`  
 
+Abaisse le niveau de confiance :  
+
+```powershell
+Set-ExecutionPolicy –ExecutionPolicy Unrestricted
+```
+
+Afficher l'emplacement pour déposer les fichiers contenant les modules :  
+```PowerShell
+
+$env:PSModulePath
+
+```
+
+Importer un module (placé dans un des chemins listé dans `$env:PSModulePath`)  
+```powershell
+Import-Module –Name "AWSPowerShell"
+```
 
 `Get-help command -showWindow` : ouvre une fenêtre avec les infos de la commande (on y retrouve aussi des exemples)  
 `Get-help command -examples` : montre des exemples d'utilisations  
@@ -16,6 +33,14 @@ Ctrl + espace pour voir toutes les options d'une commande
 
 
 https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/where-object?view=powershell-7.5
+
+
+Récupère les 2 premiers utilisateurs locaux  
+```Powershell
+
+Get-LocalUser | Select-Object -First 2
+
+```
 
 `get-localuser | where-object name -like "*admin"` : permet de récupérer les méthodes qui contiennent "admin"
 
