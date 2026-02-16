@@ -42,6 +42,17 @@ Get-LocalUser | Select-Object -First 2
 
 ```
 
+```powershell
+(Get-Service -name Spooler).Stop()
+```
+
+Voir les méthodes (de localuser dans l'exemple) : 
+
+```powershell
+Get-LocalUser | get-member
+```
+
+
 `get-localuser | where-object name -like "*admin"` : permet de récupérer les méthodes qui contiennent "admin"
 
 Exemple de pipe : `Get-NetAdapter | select name,status,LinkSpeed | where status -like Up` ; récupère les netadapter en affichant que leurs noms,status,linkspeed et qui ont le status "Up"
