@@ -1,1 +1,1 @@
-Set-LocalUser -Name "Adara McinTyre" -AccountExpires ((get-date).AddDays(2))
+Test-Connection -Count 1 192.168.100.1
