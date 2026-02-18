@@ -134,16 +134,22 @@ Compter les éléments :
 ```powershell
 # Mesure le poids en moyenne de tous les fichiers du Partage
 Get-ChildItem -file -path "\\CD01\Partage" -recurse | measure Length -Average
+```
+
+# Variables
+
+```powershell
+$nom="nom"
+$age=18
+[string]$name="gerard"
+[int]$date=2000
+```
 
 
-
+/////////////////////////
 
 ```powershell
 Get-ChildItem \\cd01\Partage\Depot\CLI01\ | where {$_.length -gt 3KB -and $_.length -lt 20KB} | select name,@{n="length";e={($_.length /1KB).ToString('N2')}} | sort name -Descending
 ```
-
-/////////////////////////
-
-
 `get-acl M:\2022 | format-list` pour voir la liste des ACL sur le dossier 2022 dans M:
 `set-acl` pour changer les droits
