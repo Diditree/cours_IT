@@ -197,12 +197,12 @@ Default {Write-Host "Le groupe n’est pas valide"}
 
 ```powershell
 Do {
-if ($x -gt 10){
-Switch($x){
-‘11’ {Write-Host "La valeur est 11"}
-‘12’ {Write-Host "La valeur est 12"}
-}
-}
-else { $x = Read-Host "Veuillez saisir une valeur supérieure à 10"}
+    if ($x -gt 10){
+        Switch($x){
+            ‘11’ {Write-Host "La valeur est 11"}
+            ‘12’ {Write-Host "La valeur est 12"}
+        }
+    }   
+else { $x = Read-Host "Veuillez saisir une valeur supérieure à 10" }
 } while ($x –lt 100)
 ```
