@@ -135,6 +135,13 @@ Compter les éléments :
 # Mesure le poids en moyenne de tous les fichiers du Partage
 Get-ChildItem -file -path "\\CD01\Partage" -recurse | measure Length -Average
 ```
+## ????
+
+```powershell
+Get-ChildItem \\cd01\Partage\Depot\CLI01\ | where {$_.length -gt 3KB -and $_.length -lt 20KB} | select name,@{n="length";e={($_.length /1KB).ToString('N2')}} | sort name -Descending
+```
+`get-acl M:\2022 | format-list` pour voir la liste des ACL sur le dossier 2022 dans M:
+`set-acl` pour changer les droits
 
 # Variables
 
@@ -145,11 +152,57 @@ $age=18
 [int]$date=2000
 ```
 
+# Boucles
 
-/////////////////////////
+## While
 
 ```powershell
-Get-ChildItem \\cd01\Partage\Depot\CLI01\ | where {$_.length -gt 3KB -and $_.length -lt 20KB} | select name,@{n="length";e={($_.length /1KB).ToString('N2')}} | sort name -Descending
+While ($x –ne "q" ) {
+$x = Read-Host " Veuillez faire un choix "
+}
 ```
-`get-acl M:\2022 | format-list` pour voir la liste des ACL sur le dossier 2022 dans M:
-`set-acl` pour changer les droits
+
+## Do While
+
+```powershell
+
+Do {
+$x = Read-Host " Veuillez faire un choix "
+} While ($x –ne "q" )
+
+Do {
+$x = Read-Host " Veuillez faire un choix "
+} Until ($x –eq "q" )
+```
+
+## Foreach
+
+```powershell
+$liste = Get-AdUser –Filter *
+Foreach ( $i in $liste) {
+Write-Host "Le nom de l’utilisateur est "$i.name
+Write-Host "Le prénom de l’utilisateur est "$i.surname
+}
+```
+
+# Switch
+
+```powershell
+Switch ($AdGroup){
+"User" {Write-Host "Le groupe est Utilisateur"}
+"Administrator" {Write-Host "Le groupe est Admin"}
+Default {Write-Host "Le groupe n’est pas valide"}
+}
+```
+
+```powershell
+Do {
+if ($x -gt 10){
+Switch($x){
+‘11’ {Write-Host "La valeur est 11"}
+‘12’ {Write-Host "La valeur est 12"}
+}
+}
+else { $x = Read-Host "Veuillez saisir une valeur supérieure à 10"}
+} while ($x –lt 100)
+```
