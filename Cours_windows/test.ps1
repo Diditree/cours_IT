@@ -18,5 +18,11 @@ foreach ($user in $users) {
     }
     Set-AdUser -Identity $user.DistinguishedName -Description "Utilisateur de $userCity"
     Write-Host $user.description
+}
+
+
+function nikaMangeDesDouceurs {
+
+    douceurs="douceurs du lidl"
 
 }

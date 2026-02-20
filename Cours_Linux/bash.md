@@ -75,6 +75,7 @@ fi
 ## Fonction
 
 On peut sourcer dans un fichier pour acceder aux fonctions  
+On utilise le terme `source` ou `.`  
 
 ```bash
 source chemin

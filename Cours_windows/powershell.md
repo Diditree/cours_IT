@@ -152,6 +152,13 @@ $age=18
 [int]$date=2000
 ```
 
+On peut modifier le scope des variables :  
+
+```powershell
+$script:nom="nom"
+$global:age=18
+```
+
 # Boucles
 
 ## While
@@ -205,4 +212,17 @@ Do {
     }   
 else { $x = Read-Host "Veuillez saisir une valeur supérieure à 10" }
 } while ($x –lt 100)
+```
+
+
+# Fonction
+
+```powershell
+function addition {
+    param($arg1, $arg2)
+    $total=$arg1+$arg2
+    return $total
+}
+
+adition 10 5
 ```
