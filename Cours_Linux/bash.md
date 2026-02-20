@@ -104,8 +104,9 @@ $@ # tous les arguments , mais séparés : si il y a 3 arguments ça correspond 
 $* # tous les arguments mais si on le met entre " " ça le transforme en une seule chaine
 ```
 
-## Boucles
+# Boucles
 
+## for
 ```bash
 for i in {1..5}; do
     echo "Compteur: $i"
@@ -117,6 +118,41 @@ for (( n=1; n<=5; n++ ))
 do  
   echo "Nombre: $n"
 done
+```
+```bash
+for i in /var/*
+do
+	echo $i 
+done
+```
+
+## While
+
+While do:  
+```bash
+while true ; do
+echo menu
+echo "1) copie des fichiers"
+echo "2) restauration des fichiers"
+echo "q) Quitter"
+echo -e "Taper 1, 2 ou q pour continuer : \c"
+read choix
+case $choix in
+1) echo copie des fichiers; […] ;;
+2) echo restauration des fichiers; […] ;;
+q) exit 0;;
+*) echo saisie incorrecte;;
+esac
+done
+```
+
+
+## While read
+
+```bash
+while read nom prenom suite ; do
+echo "$prenom $nom"
+done < fichier.txt
 ```
 
 
