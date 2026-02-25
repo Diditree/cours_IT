@@ -10,6 +10,11 @@
 - Les données (Paquet IP qui contient TCP/UDP, Données applicatives type HTTP, DNS, etc..)
 - FCS - Frame Check Sequence, vérifie si la trame est indemne avec un calcul appelé CRC, si le résultat est le même à la reception alors la trame est indemne  
 
+Si la trame provient d'un vlan, elle peut être __taguée__ par la norme __802.1Q__ , le tag se place au milieu de la trame entre la mac source et le type/longueur.  
+Elle permet d'identifier le vlan et son identifiant(valeur de 1 à 4094) de la trame et sa priorité(valeur de 0 à 7)    
+
+| MAC dest | MAC source | TAG 802.1Q | Type | Données | FCS |  
+
 ## Switch (commutateur)
 
 Les switch sont capables de mémoriser les MAC adresses
