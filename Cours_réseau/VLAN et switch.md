@@ -17,6 +17,8 @@ ports switch à switch = mode trunk pour que le paquet soit tagué 802.1Q(pour s
 __Marquage actif__: Le marquage des paquets (champ TAG VLAN) est propagé à leur sortie du switch  
 __Marquage inactif__ : Le champ TAG VLAN est supprimé avant la remise de la trame
 
+
+
 ## ??
 
 __Protocole STP__ (Spanning Tree Protocol) : Ce protocole permet d'éviter les boucles dans les switchs et arrete les tempêtes de broadcast

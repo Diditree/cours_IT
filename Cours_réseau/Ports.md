@@ -6,3 +6,4 @@
 636 = LDAPs
 53 = DNS / UDP
 3128 = proxy
+3260 = iSCSI
