@@ -61,6 +61,10 @@ Transfert de zone
 
 Astuce pour le nslookup : server x.x.x.x pour changer le target
 
-## Notes
+# Notes
 
 RFCs DNS  
+
+## Enregistrements à voir
+
+__SPF__ (Sender Policy Framework ): type d'enregistrement TXT, permet de vérifier le ou les serveurs qui ont le droit d'envoyer un courriel(__MX__) pour le domaine
