@@ -15,7 +15,8 @@
 - `whoami /user` : pour voir le SID  
 - `gpresult /x` : générer un rapport
 - `gpupdate /force` : update des GPO  
-
+- `control` ouvre le panneau de configuration
+  
 ## Executer (w+r)
 
 lancer une commande en /safe = mode sans echec    

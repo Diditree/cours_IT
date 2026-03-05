@@ -93,3 +93,10 @@ Un socket est une connexion sur un couple IP/Port
 
 ## ??
 rfc 1918
+
+# Annuaire LDAP
+
+__LDAP__ (Lightweight Directory Access Protocol) est un protocole permettant :  
+- de rechercher des utilisateurs
+- d’authentifier
+- de lire/écrire dans un annuaire
