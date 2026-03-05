@@ -73,4 +73,8 @@ Un DNS est obligatoire pour que ça fonctionne
 
 # troubleshooting outlook
 
-ctrl + clique droite sur l'icone dans les notifications
+ctrl + clique droite sur l'icone dans les notifications  
+
+On peut créer des profils pour Outlook(client lourd) depuis le panneau de configuration(courrier)  
+
+Un compte peut avoir accès à plusieurs boites mail  
