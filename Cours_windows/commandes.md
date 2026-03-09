@@ -36,7 +36,7 @@ mgmt = management
 - `fsmgmt.msc` : Dossiers partagés
 - `mstsc` : connexion à distance
 - `devmgmt.msc` : gestionnaire de périphériques
-- `dsa.msc` : gestionnaire USER et PC de l'AD
+- `dsa.msc` : gestionnaire des utilisateurs et PC de l'AD
 - `gpmc.msc` : ouvrir la gestion des GPO dans l'ad
 - `regedit` : base de registre
 - `dnsmgmt.msc` : gestionnaire DNS
