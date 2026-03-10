@@ -164,5 +164,5 @@ du -sh # Totaliser l'occupation du périphérique pour l'ensemble des fichiers, 
 
 scp identifiant@IP_du_serveur:/etc/eniconf.cfg /tmp # copier un fichier en ssh 
 
-
+nc -zv IP port
 ```
