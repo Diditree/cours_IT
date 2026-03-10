@@ -1,5 +1,7 @@
 Mode agent, mode vm  
 FailOver = inverse de load balancer  
+VSS(Volume Shadowcopy Service) = snapshot
+
 
 # Veeam Backup & Réplication
 Veeam permet de faire de la sauvegarde complète de VM et ensuite implémenter une restauration soit full (VM complète) soit granulaire (données issues de la VM)  
