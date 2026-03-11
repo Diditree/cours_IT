@@ -6,6 +6,7 @@ Replication = disponibilité de services
 
 Restauration granulaire
 
+Déduplication : 
 __RTO__ = Recovery Time Objective  
 
 
@@ -98,3 +99,25 @@ La sauvegarde incrémentale, sauvegarde les données modifiées ou ajoutées dep
 
 gain d'espace de stockage, gain de temps de sauvegarde, moins de consommation de la bande passantes
 
+
+# Classification des sauvegardes
+
+La classification des sauvegardes aide à assurer la disponibilité, la sécurité et la durabilité des données, tout en optimisant les ressources de stockage
+
+- __Inline__ : Sauvegare en temps réel, Lorsqu'une sauvegarde est effectuée, le logiciel analyse les données et supprime les doublons.
+- __Online__ : La sauvegarde est effectuée sur un support (NAS / cloud) qui reste allumé et immédiatement accessible via le réseau
+- __Near-line__ : Sauvegardes pas consultées fréquemment, mais elles restent accessibles relativement rapidement
+- __Offline__ : Le support de sauvegarde est __physiquement__ déconnecté du système, les données sont consultées rarement
+
+# Supports de sauvegardes
+
+- NAS
+- SAN : regroupement de plusieurs stockages Réseau Dédié (fible channel ou iSCSI), le san est découpé en LUN(logical unit number)
+
+__DAS__ : Les solutions de stockage de type DAS consistent à connecter directement un périphérique au serveur ou à la station de travail
+
+## Sauvegarde sur bande magnétique
+
+- DDS - DAT : DDS (Digital Data Storage) est le nom officiel de la DAT (Digital Audio Tape) (mini cassette)
+- DLT – SDLT : Digital Linear Tape (DLT, anciennement nommée CompacTape)
+- LTO : Linear Tape-Open (ou LTO) est une technique de stockage sur bande magnétique au format ouvert.(+ actuel)
