@@ -33,6 +33,13 @@ La mise en place d’un plan de backup Copy permet d’assurer une copie des don
 
 ## Procédures (mise en place d'un backup copy)
 
+
+## Ajouter un serveur Hyper-v pour lui installer un agent
+
+Inventory > Virtual infrastructure > Add server > microsoft Hyper-V (stabdalone)> Name > credentials: NOMDUSRV\Administrateur + password > review : task limit 4   
+
+
+
 ### Ajouter un backup repo
 
 Dans __Backup Infrastructure/Backup Repository__, cliquer sur __Add Repository__, puis sur __Direct attached storage__ puis sur Microsoft Windows 
