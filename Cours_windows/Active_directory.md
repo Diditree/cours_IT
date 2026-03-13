@@ -64,3 +64,8 @@ www.pingcastle.com : permet de faire un audit de l'annuaire AD
 GPO bitlocker
 
 
+# Approbation entre domaines
+
+- Ajouter dans les dns de chaque domaine dans "redirecteurs conditionnels" l'autre domaine
+- dans "Domaines et approbations Active Diretory" : clique droite sur le domaine > propriété > approbations
+

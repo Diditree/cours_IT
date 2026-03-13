@@ -104,7 +104,7 @@ gain d'espace de stockage, gain de temps de sauvegarde, moins de consommation de
 
 La classification des sauvegardes aide à assurer la disponibilité, la sécurité et la durabilité des données, tout en optimisant les ressources de stockage
 
-- __Inline__ : Sauvegare en temps réel, Lorsqu'une sauvegarde est effectuée, le logiciel analyse les données et supprime les doublons.
+- __Inline__ : Sauvegarde en temps réel, Lorsqu'une sauvegarde est effectuée, le logiciel analyse les données et supprime les doublons.
 - __Online__ : La sauvegarde est effectuée sur un support (NAS / cloud) qui reste allumé et immédiatement accessible via le réseau
 - __Near-line__ : Sauvegardes pas consultées fréquemment, mais elles restent accessibles relativement rapidement
 - __Offline__ : Le support de sauvegarde est __physiquement__ déconnecté du système, les données sont consultées rarement

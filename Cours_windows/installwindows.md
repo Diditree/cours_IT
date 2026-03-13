@@ -10,5 +10,4 @@ bypass la connexion pendant l'install W11 :
 
 Créer plusieurs partitions à l'installation d'un serveur(30go x2 ?) __C:__ pour l'os Win server __D:__ pour les données liées à l'AD(DB NTDS.dit, logs, SYSVOL)  
 
-Séparer les partitions sur des serveurs Windows ou Linux est une bonne pratique.  
-
+Séparer les partitions sur des serveurs Windows ou Linux est une bonne pratique.
