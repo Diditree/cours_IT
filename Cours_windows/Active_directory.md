@@ -27,7 +27,6 @@ _source ENI :  Windows Server 2022
 
 Une __forêt__ est une collection d'un ou plusieurs domaines AD  
 Le premier installé est le __domaine racine__  
-
 __serveur en mode RODC__ = Controle de domaine en lecture seule  
 (Sites et services Active Directory pour créer un site)  
 (Utilisateurs et Ordinateurs Active Directory > clique droite "domains controler" > créer au préalable...)  
@@ -67,5 +66,7 @@ GPO bitlocker
 # Approbation entre domaines
 
 - Ajouter dans les dns de chaque domaine dans "redirecteurs conditionnels" l'autre domaine
-- dans "Domaines et approbations Active Diretory" : clique droite sur le domaine > propriété > approbations
+- dans "Domaines et approbations Active Diretory" : clique droite sur le domaine > propriété > approbations  
+
+a
 
