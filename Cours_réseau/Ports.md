@@ -3,6 +3,7 @@
 
 80 = HTTP  
 443 = HTTPS  
+22 = ssh  
 161/162 = SNMP  
 389 = LDAP  
 636 = LDAPs  
@@ -12,3 +13,4 @@
 53 = DNS / UDP  
 3128 = proxy  
 3260 = iSCSI  
+3389 = RDP  
