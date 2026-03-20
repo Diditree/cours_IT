@@ -66,4 +66,4 @@ Pour sécuriser l'accès aux systèmes critiques, l'utilisation d'un bastion (ou
 
 # Proxy
 
-__reverse proxy__ : front qu'on met sur internet/dmz , redistribue la charge entre les serveurs
+__reverse proxy__ : front qu'on met sur internet/dmz , redistribue la charge entre les serveurs, sert un peu d'aiguilleur si plusieurs domaines sur une même IP  
