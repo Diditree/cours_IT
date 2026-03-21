@@ -19,7 +19,7 @@ enp0s3
 
 Test syntaxique : `dhcpd –t`  
 
-Le serveur a besoin d'indiquer le subnet de toutes ses interfaces sinon il ne fonctionnera pas.  
+__Le serveur a besoin d'indiquer le subnet de toutes ses interfaces sinon il ne fonctionnera pas.__  
 
 ```bash
 

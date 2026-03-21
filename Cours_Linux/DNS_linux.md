@@ -20,16 +20,21 @@ exemple de conf:
 options {
 // Répertoire de travail de Bind9
 directory "/var/cache/bind";
+
 // Redirection exclusive (pas d’appel aux racines en cas d’indisponibilité)
 // vers les serveurs Quad9
 forward only;
 forwarders { 9.9.9.9; };
+
 // Restriction des hôtes auxquels répond le serveur
 allow-query { rsxclts; };
+
 // Restriction des hôtes autorisés à adresser des requêtes récursives au serveur
 allow-recursion { rsxclts; };
+
 // Communication DNSSEC désactivée
 dnssec-validation no;
+
 // Information de version non communiquée
 version none;
 };
