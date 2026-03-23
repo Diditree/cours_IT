@@ -16,7 +16,7 @@ Le repo site statique se situe à : `var/www/dimitri03.infra.tld`
 
 Créer le virtualhost ici : `/etc/apache2/sites-available`
 
-```
+```bash
 <VirtualHost *:80>
     ServerName monsite.local
     DocumentRoot /var/www/dimitri03.infra.tld

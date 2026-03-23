@@ -7,7 +7,7 @@ On peut retrouver dans les __DMZ__
 - serveurs DNS
 - serveurs FTP
 - serveurs messagerie
-- serveurs proxy
+- serveurs (reverse) proxy
 - serveurs web  
 
 # Système de détection et de prévention d'intrusion (IDS/IPS)

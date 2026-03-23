@@ -15,4 +15,4 @@ socket = ip + port
 1:1 : redirige vers une IP (utilisé avec une ip virtuelle)
 
 source nat  
-destination nat  (dnapt) translation de port :1 seule ip publique, redirige le flux entrant lié à un port au bon port 
+destination nat  (dnapt) translation de port : 1 seule ip publique, redirige le flux entrant lié à un port au bon port 
