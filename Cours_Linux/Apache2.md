@@ -21,10 +21,15 @@ Créer le virtualhost ici : `/etc/apache2/sites-available`
     ServerName monsite.local
     DocumentRoot /var/www/dimitri03.infra.tld
 
+
+    <FilesMatch "\.(?:cgi|shtml|phtml|php)$">
+        SSLOptions +StdEnvVars
+    </FilesMatch>
     <Directory /var/www/dimitri03.infra.tld>
         Options -Indexes +FollowSymLinks
         AllowOverride None
         Require all granted
+        SSLOptions +StdEnvVars
     </Directory>
 
     ErrorLog ${APACHE_LOG_DIR}/monsite-error.log
