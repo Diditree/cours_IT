@@ -16,23 +16,28 @@ Quand on dit qu'une __CA__ signe, elle hash et chiffre ce hash
 
 Norme __X.509__ : TODO
 
+__PKI__ : Une PKI est l’ensemble des processus qui gèrent tout le cycle de vie des certificats numériques, de leur création à leur révocation.(génération des clés, CA, certificats...)    
+
+__CRL__ (liste de révocation de certificat) : liste les certificats qui ne sont plus de confiance avant leur expiration  
+
 # Fonctionnement 
 
 On souhaite sécuriser des échanges :  
 1) Le serveur qui veut sécuriser les échanges génère une __clé privée__  
 2) Une __CSR__ est générée pour attester que le serveur est le bon, la __CSR__ contient des informations comme : DN, FQDN, organisation, pays et la __clé publique__.(permettra de déchiffrer)  
-La __CSR__ sera envoyé au __CA__
+La __CSR__ sera envoyée au __CA__
 3) La __CSR__ est envoyée au __CA__, qui peut être publique(racine) ou interne(windows certsrv)  
 La __CA__ vérifie, si c'est validé elle créer un certificat et le signe.
-4) Sur le serveur qui veut sécuriser les échanges on y installe la clé publique et le certificat reçu du CA
-5) Déroulement d'une connexion : Le serveur envoie son certificat (contenant sa clé publique) au navigateur du client.
-Le navigateur vérifie qui a signé le certificat grâce à sa liste de CA racines de confiance  
-Le client utilise la clé publique pour chiffrer une "clé de session" temporaire. Seule la clé privée pourra la déchiffrer
+4) Sur le serveur qui veut sécuriser les échanges on y installe la __clé publique__ et le certificat reçu du __CA__
+5) Déroulement d'une connexion : Le serveur envoie son __certificat__ (contenant sa __clé publique__) au navigateur du client.
+Le navigateur vérifie qui a signé le __certificat__ grâce à sa liste de __CA__ racines de confiance  
+Le client utilise la __clé publique__ pour chiffrer une "clé de session" temporaire. Seule la __clé privée__ pourra la déchiffrer
 
 
 
+# NOTES
 
-
+Le __ROOT CA__(certification racine) délègue à des __SUBORDINATE CA__(subordonnées) qui vont signer les certificats à des __entité finales__(ex: serveur qui fait une CSR qui va utiliser le certificat)
 
 
 
