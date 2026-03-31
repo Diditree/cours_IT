@@ -1,0 +1,34 @@
+__Remote Desktop Service__  
+
+RDS est un rôle à installer sur un serveur windows  
+
+Utilise le protocole __RDP__ (__3389__)  
+Avant de s'appeler serveur RDS, ça s'appelait serveur TSE  
+__VDI__ = machines virtuelles instanciées pour chaque utilisateur qui se connecte au serveur RDS  
+
+Le service RDS est un service :
+- ultisession
+- Multi-utilisateurs  
+Il permet des accès multiples à des environnements dédiés  
+
+
+# Types de déploiement
+
+- Déploiement standard : utilisé pour déployer le service __RDS__ sur un ensemble de serveurs ( permet le ciblage des services de rôle sur les serveurs souhaités)
+- Démarrage rapide : Utilisé pour déployer les services __RDS__ sur un serveur unique
+  
+
+
+# Collections
+
+Désactiver les lecteurs dans les propriétés de la collection(gestionnaire de serveur > collections > propriétés > taches): empêche l'utilisateur de mapper ses lecteurs   
+
+Une collection par service ?
+
+
+# Rôles de services RDS
+
+- Hote de session bureau à distance : serveur sur lequel les utilisateurs vont se connecter
+- Broker : Dispatch les connexions
+- Gestionnaire de licenses : Permet de gérer les licenses CAL(par utilisateur ou par siège/poste qui se connecte)
+- 

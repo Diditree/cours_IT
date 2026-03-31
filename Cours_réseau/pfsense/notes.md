@@ -16,3 +16,7 @@ socket = ip + port
 
 source nat  
 destination nat  (dnapt) translation de port : 1 seule ip publique, redirige le flux entrant lié à un port au bon port 
+
+# Règles
+
+Règles flottante : Une règle flottante sur un firewall est une règle globale et prioritaire qui ne s’applique pas à une interface précise, mais potentiellement à plusieurs interfaces et directions de trafic.
