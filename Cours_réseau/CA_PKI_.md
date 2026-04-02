@@ -1,5 +1,9 @@
 # Définitions
 
+__Chiffrement Symétrique__
+__Chiffrement Asymétrique__
+
+
 __Certificat__ : Permet d'authentifier(être sur le bon site par exemple), chiffrer les données échangées,hache les données ce qui garantit l'intégrité.
 
 Le __certificat__ contient le contenu de la __CSR__, le nom de la __CA__, la clé publique, les dates d'expiration, les extensions x.509(key usage: à quoi sert le certificat ?)  

@@ -1,5 +1,6 @@
 __Remote Desktop Service__  
 
+Connexion pas chiffrée    
 RDS est un rôle à installer sur un serveur windows  
 
 Utilise le protocole __RDP__ (__3389__)  
@@ -28,7 +29,12 @@ Une collection par service ?
 
 # Rôles de services RDS
 
-- Hote de session bureau à distance : serveur sur lequel les utilisateurs vont se connecter
-- Broker : Dispatch les connexions
-- Gestionnaire de licenses : Permet de gérer les licenses CAL(par utilisateur ou par siège/poste qui se connecte)
-- 
+- __Hote de session bureau à distance__ : serveur sur lequel les utilisateurs vont se connecter
+- __Broker__ : Dispatch les connexions
+- __Gestionnaire de licenses__ : Permet de gérer les licenses CAL(par utilisateur ou par siège/poste qui se connecte)
+- __Passerelle bureau à distance__ : Chiffre le flux RDP dans une connexion HTTPS(flux RDP pas chiffré), peut pallier à un __VPN__
+
+# Publication des Applications
+
+__RemoteApp__ : permet d'executer SEULEMENT des applications en bureau à distance(on ne voit pas le bureau en entier seulement la fenêtre de l'application)   
+
