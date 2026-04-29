@@ -9,6 +9,7 @@ Supprimer :
 ```bat
 net use LETTER: /delete
 ```
+  
 On peut ajouter l'option définir si l'ajout doit persister ou non, par défaut il persiste.  
 ```bat
 net use LETTER: \\SERVER\\FOLDER /persistent:yes
@@ -23,4 +24,10 @@ list volume
 select volume X
 assign letter=LETTER
 exit
+```
+
+Pour supprimer une lettre d'un lecteur :  
+
+```bat
+remove letter=LETTER
 ```
