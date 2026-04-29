@@ -10,7 +10,7 @@ Supprimer :
 net use LETTER: /delete
 ```
 On peut ajouter l'option définir si l'ajout doit persister ou non, par défaut il persiste.  
-````bat
+```bat
 net use LETTER: \\SERVER\\FOLDER /persistent:yes
 ```
   

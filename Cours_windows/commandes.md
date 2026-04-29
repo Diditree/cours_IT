@@ -43,8 +43,7 @@ mgmt = management
 - `dnsmgmt.msc` : gestionnaire DNS
 - `dhcpmgmt.msc` : gestionnaire DHCP
 - `ms-settings:optionalfeatures` : ouvre les options falcutatives
-- `certlm.msc` : affiche les certificats
-
+- `certlm.msc` : affiche les certificats  
 
 
 
