@@ -18,7 +18,7 @@ groupe dynamique : on peut attribuer un user automatiquement dedans (On peut att
 
 ## types de groupes :
 
-__Groupe Microsoft 365__ : groupe collaboratif complet, il inclut automatiquement: boite maile, calendrier, espace fichier sharepoint,...
+__Groupe Microsoft 365__ : groupe collaboratif complet, il inclut automatiquement: boite mail, calendrier, espace fichier sharepoint,...
 
 __Groupe de distribution__ : pour la diffusion d'informations
 

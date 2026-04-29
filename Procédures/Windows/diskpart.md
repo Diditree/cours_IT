@@ -1,5 +1,27 @@
+# Cheatsheet
+
+```bat
+diskpart
+```
+```bat
+list volume
+```
+```bat
+select volume LETTER
+```
+```bat
+assign letter=LETTER
+remove letter=LETTER
+```
+```bat
+exit
+```
+
+
+
+# Autre
 - En vue de stocker les documents de travail des utilisateurs, créez un volume E: d’une taille de 6 Go environ en RAID 5 appelé Données
-je veux dur Raid 5 donc types de configuration dynamique pour 3 disque
+je veux du Raid 5 donc type de configuration dynamique pour 3 disques
  
 `select disk 1`
 `convert dynamic`
