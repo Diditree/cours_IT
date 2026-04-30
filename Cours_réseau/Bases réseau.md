@@ -181,8 +181,8 @@ __OSPF__ (là où la bande passante est la plus haute donc + rapide):
 
 
 
-__PAT__  : Attribue des ports pour les NAT  
-__NAT__  : Une adresse IP publique pour plusieurs ip privées
+__PAT__ (__Port Address Translation__)  : Attribue des ports pour les NAT  
+__NAT__ (__Network Address Translation__) : Une adresse IP publique pour plusieurs ip privées  
 
 ## Rôles
 
