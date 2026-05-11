@@ -35,7 +35,7 @@ mgmt = management
 - `mmc` : console
 - `secpol.msc` : Stratégie de sécurité locale  
 - `fsmgmt.msc` : Dossiers partagés
-- `mstsc` : connexion à distance
+- `mstsc` : RDP/ connecion à distance (Microsoft Terminal Services Client)
 - `devmgmt.msc` : gestionnaire de périphériques
 - `dsa.msc` : gestionnaire des utilisateurs et PC de l'AD
 - `gpmc.msc` : ouvrir la gestion des GPO dans l'ad
