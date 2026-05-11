@@ -44,8 +44,7 @@ mgmt = management
 - `dhcpmgmt.msc` : gestionnaire DHCP
 - `ms-settings:optionalfeatures` : ouvre les options falcutatives
 - `certlm.msc` : affiche les certificats  
-
-
+- `%temp%` : fichiers temporaire (AppData\Local\Temp)  
 
 ## Raccourcis clavier
 
