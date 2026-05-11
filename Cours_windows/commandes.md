@@ -49,4 +49,10 @@ mgmt = management
 
 ## Raccourcis clavier
 
-Win + i : Paramètres windows
+- Win + i : Paramètres windows  
+- Win + x : Menu administrateur  
+- Win + e : Explorateur de fichiers 
+- Ctrl + Shift + Esc : Gestionnaire des tâches
+- ALT + ESPACE : permet d'acceder à déplacer une fenêtre
+- Win + v : historiquer copier/coller
+- CTRL + Shift + Clic : Ouvrir en admin
