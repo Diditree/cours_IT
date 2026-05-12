@@ -46,6 +46,7 @@ mgmt = management
 - `certlm.msc` : affiche les certificats  
 - `%temp%` : fichiers temporaire (AppData\Local\Temp)  
 
+
 ## Raccourcis clavier
 
 - Win + i : Paramètres windows  
