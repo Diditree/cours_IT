@@ -56,3 +56,8 @@ mgmt = management
 - ALT + ESPACE : permet d'acceder à déplacer une fenêtre
 - Win + v : historiquer copier/coller
 - CTRL + Shift + Clic : Ouvrir en admin
+
+
+## Autres 
+
+`appwiz.cpl` 
