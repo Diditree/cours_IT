@@ -8,7 +8,7 @@ Avant de s'appeler serveur RDS, ça s'appelait serveur TSE
 __VDI__ = machines virtuelles instanciées pour chaque utilisateur qui se connecte au serveur RDS  
 
 Le service RDS est un service :
-- ultisession
+- Multisession
 - Multi-utilisateurs  
 Il permet des accès multiples à des environnements dédiés  
 

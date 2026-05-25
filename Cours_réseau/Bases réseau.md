@@ -13,7 +13,7 @@
 Si la trame provient d'un vlan, elle peut être __taguée__ par la norme __802.1Q__ , le tag se place au milieu de la trame entre la mac source et le type/longueur.  
 Elle permet d'identifier le vlan et son identifiant(valeur de 1 à 4094) de la trame et sa priorité(valeur de 0 à 7)    
 
-| MAC dest | MAC source | TAG 802.1Q | Type | Données | FCS |  
+| MAC dest | MAC source | __TAG 802.1Q__ | Type | Données | FCS |  
 
 ## Switch (commutateur)
 
@@ -181,8 +181,8 @@ __OSPF__ (là où la bande passante est la plus haute donc + rapide):
 
 
 
-__PAT__  : Attribue des ports pour les NAT  
-__NAT__  : Une adresse IP publique pour plusieurs ip privées
+__PAT__ (__Port Address Translation__)  : Attribue des ports pour les NAT  
+__NAT__ (__Network Address Translation__) : Une adresse IP publique pour plusieurs ip privées  
 
 ## Rôles
 
