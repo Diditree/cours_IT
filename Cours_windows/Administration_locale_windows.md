@@ -6,3 +6,11 @@ Depuis __Gestion de l'ordinateur__ : `compmgmt.msc` (computer management), on pe
 Le disque est automatique partagé sur le réseau (C$) `\\PC-UTILISATEUR\C$`  
 
 __LAPS__
+
+## WINRS  
+
+__winrs__ : permet d’exécuter des commandes à distance sur une machine Windows via le protocole WinRM 
+
+```
+winrs -r:HOSTNAME cmd
+```  

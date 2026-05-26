@@ -14,7 +14,6 @@ On peut réinitialiser __One Drive__ :
 - `"C :\Program Files (x86)\Microsoft OneDrive\onedrive.exe /reset"`
 
 
-
 # Teams
 
 Pour vider le cache __Teams__ il faut supprimer le contenu dans :
