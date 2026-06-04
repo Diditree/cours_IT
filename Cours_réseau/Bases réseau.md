@@ -107,7 +107,7 @@ on va comparer chaque binaire, par exemple pour 1 le premier octet qui est 192
 Si le sous masque est 255 alors le resultat sera le même que l'IP (ex: 192&255 = 192)  
 Si le sous masque est 0 alors le resultat est 0 (ex 1&0 = 0)
 
-donc le __numéro de réseau__ de l'adresse IP 192.138.29.1 et du masque de sous réseau 255.255.255.0 est 292.138.29.0
+donc le __numéro de réseau__ de l'adresse IP 192.138.29.1 et du masque de sous réseau 255.255.255.0 est 192.138.29.0
 
 On peut écrire le masque de sous réseau avec la notation __CIDR__ 
 
@@ -134,9 +134,9 @@ un 0 exemple : 255 -1 = 254 puis 254 -2 = 252 puis 252 – 4 = 248 etc )
 NB: grâce à la technique du trait(écrire l'ip et le masque en binaire et tracer un trait à partir du dernier 1 du masque de sous réseau) :  
 
 - pour calculer le n° de réseau à droite du trait que des 0 dans l'adresse IP
-- pour le broadcast partiel à droite du trait que des 1 dans l'adresse IP  
+- pour le broadcast partiel à droite du trait que des 1 dans l'adresse IP    
 
-![Trait](exemple_du_trait.png)  
+![Trait](exemple_du_trait.png)    
 
 #### Comment partager son réseau  ?
 
@@ -155,7 +155,7 @@ On décalle le bit du masque ex:
 - on souhaite 4 sous réseaux, on décalle de 2  
 - on souhaite 8 sous réseaux, on décalle de 3  
 
- ![Visuel de l'explication du partage](sousreseau.png)
+ ![Visuel de l'explication du partage](sousreseau.png)  
 
  Un réseau /30 est un réseau dit "point à point" (il ne contient que 2ip pour les hotes)
 
@@ -221,3 +221,13 @@ OU 256 / 2Nx
 |    6 | 192.168.10.160/27 | 192.168.10.161      | 192.168.10.190      | 192.168.10.191 |
 |    7 | 192.168.10.192/27 | 192.168.10.193      | 192.168.10.222      | 192.168.10.223 |
 |    8 | 192.168.10.224/27 | 192.168.10.225      | 192.168.10.254      | 192.168.10.255 |
+
+## Calculer rapidement le nombre d'hôtes dans un réseau
+
+Formule : 2n-2  
+
+Exemple : combien il y a d'hôte dans un réseau en CIDR 24 ?  
+
+2^8 - 2 = 254  
+
+Pour un réseau /24 il y a donc 254 hôtes  
