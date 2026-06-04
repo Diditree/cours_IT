@@ -125,10 +125,9 @@ L'adresse de Broadcast partiel = la dernière adresse théorique (ex: 192.168.29
 Unicast = 1 destinataire
 Broadcast = tous les ordinateurs du réseau
 
-Voici un tableau pertinent qui montre les IP de la notation CIDR 8 à 30  
-![Tableau d'ip](ips.png)
-( mnémotechnique : on fait -x qu’on multiplie par 2 à chaque fois qu’on enlève 
-un 0 exemple : 255 -1 = 254 puis 254 -2 = 252 puis 252 – 4 = 248 etc )  
+Voici un tableau pertinent qui montre les IP de la notation CIDR 8 à 30   
+![Tableau d'ip](ips.png)  
+( mnémotechnique : on fait -x qu’on multiplie par 2 à chaque fois qu’on enlève un 0 exemple : 255 -1 = 254 puis 254 -2 = 252 puis 252 – 4 = 248 etc )    
 
 
 NB: grâce à la technique du trait(écrire l'ip et le masque en binaire et tracer un trait à partir du dernier 1 du masque de sous réseau) :  
