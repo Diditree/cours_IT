@@ -226,7 +226,7 @@ OU 256 / 2Nx
 Formule : 2n-2  
 
 Exemple : combien il y a d'hôte dans un réseau en CIDR 24 ?  
-
+Il ya 32 bits dans l'ip, il faut savoir combien de bits pour l'hôte :  32 - 24 = 8  
 2^8 - 2 = 254  
 
 Pour un réseau /24 il y a donc 254 hôtes  
