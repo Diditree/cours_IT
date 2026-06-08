@@ -21,6 +21,8 @@ NB: On peut copier coller l'intégralité d'une config d'un router
 `line console 0` : selectionne la console de l'équipement  
 `password MDP` : lui attribut le MDP MDP
 
+`login` : exige une authentification
+
 `ip route NETWORK SUBNETMASK IP`
 
 `line vty 0 15` : selectionne les lignes VTY ensuite avec password on définit le MDP, login active la demande de MDP

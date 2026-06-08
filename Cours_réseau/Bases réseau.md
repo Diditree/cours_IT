@@ -200,7 +200,7 @@ On doit "emprunter" des bits à la partie HOTE pour créer des parties réseau
 
 pour savoir combien de bits on va emprunter on peut utiliser une formule mathématique : 2n=8⟹n=3
 
-On souhaite 8 sous réseaux donc, 2 puissance 3 = 8 donc il faut empruntés 3 bits pour avoir 8 sous réseaux  
+On souhaite 8 sous réseaux donc, 2^3 = 8 donc il faut empruntés 3 bits pour avoir 8 sous réseaux  
 
 à la base CIDR /24 on ajoute les 3 bits = CIDR /27  
 
