@@ -1,5 +1,6 @@
 # Active Directory
 
+corbeille active directory   
 
 __SYSVOL__ Windows\SYSVOL\sysvol : endroit où l'on peut constater la synchronisation entre deux DC    
  

@@ -7,7 +7,7 @@ https://github.com/grplyler/cisco-cheatsheet
 
 NB: On peut copier coller l'intégralité d'une config d'un router
 
-`copy running-config startup-config` : save  
+`copy running-config startup-config` : save  (`copy r s`)
 `do wr` : save  (do = faire de n'importe où)
 `show run` :  (do fonctionne avec)
 `write memory`
@@ -15,7 +15,11 @@ NB: On peut copier coller l'intégralité d'une config d'un router
 `hostname` : change le nom de l'équipement 
 
 `int G0/0` , `interface GigabitEthernet 0/0 `  
-`ip add x.x.x.x`
+
+`ip add x.x.x.x`  
+
+`ip default-gateway IP`  
+
 `no sh` : active l'interface
 
 `line console 0` : selectionne la console de l'équipement  
@@ -31,18 +35,20 @@ NB: On peut copier coller l'intégralité d'une config d'un router
 
 `service password-encryption` : chiffre les MDP
 
-`show running-conf`
+`show running-conf` / `sh run` : afficher la configuration actuellement active en mémoire vive     
 
-`show ip interface`
+`show ip interface` / `show ip interface brief` : afficher les interfaces avec leurs IP et statuts
 
-`banner motd`
-`banner login` ssh
-`banner exec` telnet
+`show vlan brief` : affiche la base de données locale des VLAN du commutateur et les ports qui y sont affectés.  
 
-`logging synchronous`
 
-`show vlan brief` : affiche la base de données locale des VLAN du commutateur et les ports
-qui y sont affectés.
+  
+`banner motd`  
+`banner login` ssh  
+`banner exec` telnet  
+
+`logging synchronous`  
+
 
 Pour setup Telnet:
 ```
@@ -63,7 +69,7 @@ exit
 
 Affecter des ports aux VLAN:
 ```
-interface range fastEhternet 0/5-6
+interface range fastEthernet 0/5-6
 switchport mode access
 switchport access vlan VLAN_ID
 ```
@@ -132,6 +138,9 @@ no password
 login local
 transport input ssh
 ```
+
+`ssh -l USER IP`  
+
 `ip domain-name` : définit le nom de domaine IP.
 
 `crypto key generate rsa` : génère la paire de clés RSA
