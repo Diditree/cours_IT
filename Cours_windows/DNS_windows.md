@@ -4,7 +4,8 @@
 
 ### Requêtes DNS résolveur
 Deux types de requêtes peuvent être adressés à un serveur DNS :  
-- Les __requêtes récursives__ : Le serveur répondant doit fournir une réponse complète à la question posée
+- Les __requêtes récursives__ : Le serveur répondant doit fournir une réponse complète à la question posée  
+__Exemple__ : Interroge le serveur racine > Interroge le serveur du domaine (.com/.fr...) > Interroge le serveur faisant autorité (exemple.com..) > récupère l'IP > retourne l'IP  
 - Les __requêtes itératives__ : Le serveur qui envoie la requête accepte une réponse partielle à la question posée. La réponse sera une indication lui permettant d’avancer dans son processus de résolution.  
 
 Un système client fait toujours une requête recursive vers son __DNS__  

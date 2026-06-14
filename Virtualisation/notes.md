@@ -17,7 +17,7 @@ Mécanisme de prise en charge de __SLAT__
 - Intel : EPT 
 - AMD : NPT / RVI
 
-
+__Paravirtualisation__ : l'OS sait qu'il est dans une machine virtuelle  
 
 # Vsphère / VMWare ESXi
 
