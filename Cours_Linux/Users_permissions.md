@@ -1,8 +1,17 @@
+# Définitions
+__Sticky Bit__ : Lorsqu'il est activé sur un dossier, il restreint le droit de suppression et de renommage    
+
+__SetUID__ : Quand un utilisateur lance un programme avec le bit SetUID activé, le programme s'exécute avec les droits du propriétaire du fichier, et non avec ceux de l'utilisateur qui le lance  ( __s__ à la place de __x__ dans les droits du propriétaire )      
+
+_SetGID__ : Les nouveaux fichiers héritent automatiquement du groupe du dossier ( __s__ aussi mais côté groupe )     
+
 # Permissions
 
 https://doc.ubuntu-fr.org/permissions
 
 _à voir `umask`_
+
+
 
 `sudo adduser didi` créer un nouvel utilisateur didi , créer un /home/didi , enregistre les infos demandées dans __etc/passwd__ et __/etc/shadow__
 
@@ -77,3 +86,7 @@ setgid: g+s
 stickybit: o+t  
 
 ex `chmmod u+s monscript.sh` (active le setuid sur monscript.sh, donc s)
+
+
+# Exemples
+
