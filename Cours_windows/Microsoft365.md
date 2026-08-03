@@ -10,10 +10,24 @@ Différents rôles peuvent être attribués à un nouvel utilisateur avec une d�
 
 __intune__ : A single management experience for the End User Computing team in IT to ensure employees' Microsoft 365 devices and apps are secured, managed, and current.  
 
+
+- __Microsoft Entra ID__ : authenticates the employee and provides single sign-on to corporate apps.  
+- __Microsoft Entra ID Governance__ : automatically provisions the right access based on the employee's role.  
+- __Microsoft Entra ID Protection__ : evaluates each sign-in for risk and triggers stronger authentication when needed.  
+- __Microsoft Entra Internet Access__ : secures the employee's connection to cloud and internet resources.  
+- __Microsoft Entra Private Access__ : provides secure access to on-premises apps without a VPN.  
+
+__Microsoft Entra Connect Sync__ : synchronise les informations nécessaires et voulues entre l'__AD__ et l'__Entra ID__(idéal pour grosse entreprise et bien plus lourd)  
+
+__Microsoft Entra Cloud Sync__ : Au lieu d'un gros serveur de synchronisation, on installe un petit agent sur un ou plusieurs serveurs (pas de DB, pas de serv dédié, dans le cloud, rapide à déployer)     
+
 # groupes
 
-groupe attribué : admin doit rentrer les user à la main dedans
-groupe dynamique : on peut attribuer un user automatiquement dedans (On peut attribuer des licenses à des groupes)  
+__Identities__ : On peut attribuer des __identités__ à des user, devices et des software-based objects comme des app   
+Si des __identités__ on besoin des mêmes caccès on peut créer des groupes pour gérer les permissions.  
+
+groupe attribué : admin doit rentrer les user à la main dedans  
+groupe dynamique : on peut attribuer un user automatiquement dedans (On peut attribuer des licenses à des groupes)   
 
 
 ## types de groupes :
@@ -26,7 +40,16 @@ __Groupe de sécurité__ : sert à gérer des droits d'accès, souvent géré de
 
 
 
+# Définitions
+
+__Tenant__ : Un tenant Microsoft est l'espace cloud dédié à une organisation. Il constitue une frontière d'administration et de sécurité dans laquelle sont stockés les identités (utilisateurs, groupes, appareils), les applications, les licences et les politiques de sécurité de l'entreprise. Chaque tenant est isolé des autres organisations et possède un identifiant unique (Tenant ID) ainsi qu'un domaine initial du type  
+
+__Directory__ : Base de données du tenant  
+
+__Multi tenant__ : Entreprise qui possède plusieurs tenant, ils ont indépendants (plusieurs filliales d'une holding par ex), les utilisateurs de chaque tenant ne sont pas partagés entre les tenant    
+
 # Notes
+
 
   
 __User Principal Name__ = __UPN__  = C'est l’identifiant de connexion d’un utilisateur, exemple : utilisateur@domaine ( Domaines et approbations Active directory > clique droite propriété sur domaine)    
