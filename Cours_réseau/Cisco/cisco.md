@@ -7,12 +7,18 @@ https://github.com/grplyler/cisco-cheatsheet
 
 NB: On peut copier coller l'intégralité d'une config d'un router
 
-`copy running-config startup-config` : save  (`copy r s`)
-`do wr` : save  (do = faire de n'importe où)
-`show run` :  (do fonctionne avec)
-`write memory`
+`?` : montre les commandes  
 
-`hostname` : change le nom de l'équipement 
+`en` / `enable` : mode privilégié(admin)   
+
+`end` : remet en mode enable  
+
+`copy running-config startup-config` : save  (`copy r s`)
+`do wr` : save  (do = faire de n'importe où)  
+`show run` :  (do fonctionne avec)  
+`write memory`  
+
+`hostname` : change le nom de l'équipement   
 
 `int G0/0` , `interface GigabitEthernet 0/0 `  
 
@@ -20,20 +26,20 @@ NB: On peut copier coller l'intégralité d'une config d'un router
 
 `ip default-gateway IP`  
 
-`no sh` : active l'interface
+`no sh` : active l'interface  
 
 `line console 0` : selectionne la console de l'équipement  
-`password MDP` : lui attribut le MDP MDP
+`password MDP` : lui attribut le MDP MDP  
 
-`login` : exige une authentification
+`login` : exige une authentification  
 
-`ip route NETWORK SUBNETMASK IP`
+`ip route NETWORK SUBNETMASK IP`  
 
-`line vty 0 15` : selectionne les lignes VTY ensuite avec password on définit le MDP, login active la demande de MDP
+`line vty 0 15` : selectionne les lignes VTY ensuite avec password on définit le MDP, login active la demande de MDP  
 
-`enable secret MDP` : active le MDP pour le mode privilège(enable)
+`enable secret MDP` : active le MDP pour le mode privilège(enable)  
 
-`service password-encryption` : chiffre les MDP
+`service password-encryption` : chiffre les MDP  
 
 `show running-conf` / `sh run` : afficher la configuration actuellement active en mémoire vive     
 
