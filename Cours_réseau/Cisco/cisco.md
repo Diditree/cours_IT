@@ -20,6 +20,8 @@ NB: On peut copier coller l'intégralité d'une config d'un router
 
 `hostname` : change le nom de l'équipement   
 
+__SVI__ (Switch virtual interface) = interface VLAN  
+
 `int G0/0` , `interface GigabitEthernet 0/0 `  
 
 `ip add x.x.x.x`  
