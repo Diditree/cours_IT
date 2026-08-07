@@ -1,5 +1,7 @@
 # Notes
 
+Voir __Ethertype__ : https://fr.wikipedia.org/wiki/EtherType
+
 ## ACL
 
 __QoS__ : permet de gérer la priorité des paquets, exemple prioriser le VOIP plutot que la data  
@@ -77,7 +79,7 @@ no 10
 
 ## Supprimer une ACL
 
-Supprimer une ACL affecter à une interface :
+Supprimer une ACL affectée à une interface :
 ```
 int INTERFACE
 no ip access-group NOM/NUMERO out/int
