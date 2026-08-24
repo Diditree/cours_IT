@@ -4,7 +4,11 @@ corbeille active directory
 
 __SYSVOL__ Windows\SYSVOL\sysvol : endroit où l'on peut constater la synchronisation entre deux DC    
  
-à la promotion d'un serveur en controleur de domaine un compte "__krbtgt__" est créé automatiquement
+à la promotion d'un serveur en controleur de domaine un compte "__krbtgt__" est créé automatiquement  
+
+Base de donnée AD qui remplace la base SAM : __ntds.dit__ C:\Windows\NTDS\ntds.dit  
+
+Lorsque un serveur est promut CD la base SAM    
 
 # AGDLP  
 
