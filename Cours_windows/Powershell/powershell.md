@@ -43,8 +43,12 @@ Mettre à jour `get-help` localement :
 ```Powershell
 Update-help -SourcePath \\chemin\vers\aide\PowerShell -UIculture en-US -credential <login>
 ```
-
-
+  
+```powershell
+Get-CimInstance
+Get-CimClass
+```  
+  
 # Bases
 
 ## Help 

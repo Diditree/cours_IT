@@ -24,7 +24,9 @@ __SVI__ (Switch virtual interface) = interface VLAN
 
 `int G0/0` , `interface GigabitEthernet 0/0 `  
 
-`ip add x.x.x.x`  
+`ip add x.x.x.x`  / `ipv6 add address xxxxxx`       
+
+`ipv6 unicast-routing` active l'ipv6 qui est desactivé par défaut  
 
 `ip default-gateway IP`  
 
@@ -33,9 +35,10 @@ __SVI__ (Switch virtual interface) = interface VLAN
 `line console 0` : selectionne la console de l'équipement  
 `password MDP` : lui attribut le MDP MDP  
 
-`login` : exige une authentification  
+`login` : exige une authentification     
+`login local`   
 
-`ip route NETWORK SUBNETMASK IP`  
+`ip route NETWORK SUBNETMASK IP`    
 
 `line vty 0 15` : selectionne les lignes VTY ensuite avec password on définit le MDP, login active la demande de MDP  
 

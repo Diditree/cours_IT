@@ -4,6 +4,7 @@ corbeille active directory
 
 __SYSVOL__ Windows\SYSVOL\sysvol : endroit où l'on peut constater la synchronisation entre deux DC    
  
+à la promotion d'un serveur en controleur de domaine un compte "__krbtgt__" est créé automatiquement
 
 # AGDLP  
 
@@ -22,7 +23,7 @@ Exemple d'un fichier de partage "Comptabilité" en accès "Modification" pour le
 
 
 
-
+# AD
 _source ENI :  Windows Server 2022
 - Les bases indispensables pour administrer et configurer votre serveur_
 
@@ -35,12 +36,20 @@ __serveur en mode RODC__ = Controle de domaine en lecture seule
 
 
 
-à revoir : __les 5 rôles FSMO__  
-- maitre d'émulation RID
-- Maitre d'infrastructure
-- Maitre de nommage de domaine
-- Maitre de schéma
-- Maitre de domaine PDC  
+__les 5 rôles FSMO__  
+- __maitre d'émulation RID__ : Distribue les numéros utilisés pour identifier les objets(partie finale du SID / 1 par domaine)  
+- __Maitre d'infrastructure__ : Gère les références aux objets d'autres domaines(met à jour les informations sur les utilisateurs entre domaines par exemple / 1 par domaine)
+- __Maitre de nommage de domaine__ : Autorise l'ajout/suppression de domaines dans la forêt(décide quels domaines peuvent être ajoutés ou supprimés dans la forêt / 1 par forêt)
+- __Maitre de schéma__ : Définit la structure d'Active Directory( / 1 par forêt)
+- __Maitre de domaine PDC__  : Le "chef" pour plusieurs opérations importantes du domaine(synchronise l'heure du domaine,intervient dans les changements de MDP: permet à un utilisateur de se connecter directement avec son nouveau MDP sans erreur d'authentificaiton / 1 par domaine)  
+
+Voir les rôles avec __PowerShell__ :
+```powershell
+netdom query fsmo
+```  
+
+
+
 
 Nommer son domaine :
 
