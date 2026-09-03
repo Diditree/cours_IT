@@ -38,7 +38,9 @@ __Groupe de distribution__ : pour la diffusion d'informations
 
 __Groupe de sécurité__ : sert à gérer des droits d'accès, souvent géré depuis l'Entra ID
 
-
+- Les __groupes de sécurité__ servent principalement à gérer les accès et peuvent contenir des utilisateurs, appareils et même d'autres groupes de sécurité.
+- Les __groupes Microsoft 365__ sont orientés collaboration et contiennent uniquement des utilisateurs. Ils peuvent être associés à une adresse e-mail et à des ressources comme Teams ou SharePoint.
+- Avec les __groupes dynamiques__, l'appartenance est automatiquement mise à jour selon les attributs des utilisateurs. Si l'attribut ne correspond plus à la règle, l'utilisateur est retiré du groupe.  
 
 # Définitions
 
