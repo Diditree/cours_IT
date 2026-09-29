@@ -1,7 +1,13 @@
 # Active Directory
 
+
+__Niveau fonctionnel de domaine__ : pour les DC, si 2025 , ils doivent tous être en 2025 (voir __niveau fonctionnel de forêt) 
+  
+
+
 corbeille active directory   
 
+__PAS__ = catalogue global, synchronise les objets entre les domaines mais pas tous leurs attributs  
 
 Groupe __Administrateurs de l'entreprise__ = seulement disponible sur le domaine racine  
 
@@ -9,14 +15,25 @@ __Magasin d'identité__
 
 __Ticket__ , __TGT__  
 
-__SYSVOL__ Windows\SYSVOL\sysvol : endroit où l'on peut constater la synchronisation entre deux DC    
+
+__Schéma Active Directory__ = comme prototype d'objet, ex user : créer un user = instancier l'objet user     
+1 schéma par forêt  
+
+__SYSVOL__ Windows\SYSVOL\sysvol : endroit où l'on peut constater la synchronisation entre deux DC(Les GPO sont stockées dedans)  
+Voir __DFSR__ dans __sysvol__      
  
 à la promotion d'un serveur en controleur de domaine un compte "__krbtgt__" est créé automatiquement  
 
+__NTDS__ = base de données :  
 Base de donnée AD qui remplace la base SAM : __ntds.dit__ C:\Windows\NTDS\ntds.dit  
+La base de données __NTDS__ est repartie en 3 partitions : Configuration, schéma, domaine
+Schéma et config : répliquer sur chaque __DC__(les mêmes)  
 
-Lorsque un serveur est promut CD la base SAM    
 
+__patitions applicatives__ potentielles qui peuvent être ajotuée à la base annuaire __NTDS__ : __DNS__ , __PAS__  
+
+
+__SID__ : dernière partie qui est fixe, ex 500 admin, c'est le __RID__
 # AGDLP  
 
 Bonnes pratiques :  
@@ -40,25 +57,44 @@ _source ENI :  Windows Server 2022
 
 Une __forêt__ est une collection d'un ou plusieurs domaines AD  
 Le premier installé est le __domaine racine__  
-__serveur en mode RODC__ = Controle de domaine en lecture seule  
+__serveur en mode RODC__ = Controle de domaine en lecture seule(voir groupe de réplication dont le mdp RODC est autorisé/refusé)  
 (Sites et services Active Directory pour créer un site)  
 (Utilisateurs et Ordinateurs Active Directory > clique droite "domains controler" > créer au préalable...)  
 (penser à changer le controleur de domaine du RODC dans users et ordinateurs AD)
 
 
 
+## FSMO 
 __les 5 rôles FSMO__  
-- __maitre d'émulation RID__ : Distribue les numéros utilisés pour identifier les objets(partie finale du SID / 1 par domaine)  
-- __Maitre d'infrastructure__ : Gère les références aux objets d'autres domaines(met à jour les informations sur les utilisateurs entre domaines par exemple / 1 par domaine)
 - __Maitre de nommage de domaine__ : Autorise l'ajout/suppression de domaines dans la forêt(décide quels domaines peuvent être ajoutés ou supprimés dans la forêt / 1 par forêt)
-- __Maitre de schéma__ : Définit la structure d'Active Directory( / 1 par forêt)
-- __Maitre de domaine PDC__  : Le "chef" pour plusieurs opérations importantes du domaine(synchronise l'heure du domaine,intervient dans les changements de MDP: permet à un utilisateur de se connecter directement avec son nouveau MDP sans erreur d'authentificaiton / 1 par domaine)  
+- __Maitre de schéma__ : Définit la structure d'Active Directory et les répliques sur les domaines( / 1 par forêt)
+- __maitre d'émulation RID__ : Distribue les numéros utilisés pour identifier les objets, c'est la dernière partie du __SID__(partie finale du SID / 1 par domaine), __RID__ = dernière partie du __SID__    
+- __Maitre d'infrastructure__ : Gère les références aux objets d'autres domaines(met à jour les informations sur les utilisateurs entre domaines par exemple / 1 par domaine), synchronise les attributs __objets interdomaines__  
+- __Maitre de domaine PDC__  : Le "chef" pour plusieurs opérations importantes du domaine(synchronise l'heure du domaine,intervient dans les changements de MDP: permet à un utilisateur de se connecter directement avec son nouveau MDP sans erreur d'authentificaiton / 1 par domaine), Synchronise l'heure  
 
-Voir les rôles avec __PowerShell__ :
+
+clique droite sur le domaine > maitre d'opération  
+
+__IMPORTANT POUR LA MIGRATION__ : https://learn.microsoft.com/fr-fr/troubleshoot/windows-server/active-directory/view-transfer-fsmo-roles     
+Voir aussi : __ntdsutil__ pour transferer les rôles  
+https://learn.microsoft.com/fr-fr/windows-server/identity/ad-ds/manage/manage-fsmo-roles
+Commande PS pour transférer les rôles :
 ```powershell
+Move-ADDirectoryServerOperationMasterRole
+```
+
+(Get-ADForest).ForestMode
+Set-ADForestMode -Identity domdl.ad -ForestMode Windows2016Forest
+Voir les rôles avec __PowerShell__ :
+
+```powershell
+Get-ADForest | select *master
+Get-ADDomain | select pdc*,*master
+```
+En __CMD__
+```
 netdom query fsmo
 ```  
-
 
 
 
@@ -88,6 +124,4 @@ GPO bitlocker
 
 - Ajouter dans les dns de chaque domaine dans "redirecteurs conditionnels" l'autre domaine
 - dans "Domaines et approbations Active Diretory" : clique droite sur le domaine > propriété > approbations  
-
-a
 
