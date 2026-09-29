@@ -42,3 +42,5 @@ commandes utiles :
 
 `sudo a2ensite monsite.conf` : Active le site
 `sudo apache2ctl configtest` : Teste la synthaxe
+
+
