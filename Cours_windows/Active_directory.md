@@ -2,6 +2,13 @@
 
 corbeille active directory   
 
+
+Groupe __Administrateurs de l'entreprise__ = seulement disponible sur le domaine racine  
+
+__Magasin d'identité__  
+
+__Ticket__ , __TGT__  
+
 __SYSVOL__ Windows\SYSVOL\sysvol : endroit où l'on peut constater la synchronisation entre deux DC    
  
 à la promotion d'un serveur en controleur de domaine un compte "__krbtgt__" est créé automatiquement  
