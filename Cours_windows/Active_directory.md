@@ -1,10 +1,15 @@
 # Active Directory
 
+__Canal sécurisé__(mot de passe) entre l'objet ordinateur et l'AD : possibilité de réinitialiser   
 
 __Niveau fonctionnel de domaine__ : pour les DC, si 2025 , ils doivent tous être en 2025 (voir __niveau fonctionnel de forêt) 
   
-
-
+__Sites AD__ : temps de réplication dans defaultip(clique droite IP) : service de replication = __KCC__ , c'est lui qui génère NTDS settings 
+Commande liée à la replication :    
+ ```
+ repadmin
+ ```
+  
 corbeille active directory   
 
 __PAS__ = catalogue global, synchronise les objets entre les domaines mais pas tous leurs attributs  
@@ -34,6 +39,13 @@ __patitions applicatives__ potentielles qui peuvent être ajotuée à la base an
 
 
 __SID__ : dernière partie qui est fixe, ex 500 admin, c'est le __RID__
+
+# Administration AD
+
+## Requete enregistrée
+
+On peut créer des __requetes enregistrées__ dans __UOAD__ pour filtrer , par exemple trouver tous les utilisateurs désactivés 
+
 # AGDLP  
 
 Bonnes pratiques :  
@@ -49,6 +61,24 @@ Exemple d'un fichier de partage "Comptabilité" en accès "Modification" pour le
 - On créer 4 __DL__ pour le fichier partagé Comptabilité DL_Comptabilite_XX  
 - On Ajoute à la DL DL_Comptabilite_Modification GG_Comptabilite et GG_Direction
 
+
+## Groupes  
+- __Groupe distribution__ : pour diffuser (mail etc)   
+- __Groupe sécurité__: droits ACL  
+- __Groupe Global__ : regrouper des objets similaires(ex: tous les commerciaux) , Uniquement objets utilisateur, ordinateur ou groupe global du même domaine   
+- __Groupe Domaine Local__ : Donner des droits d'accès à des ressources (Uniquement sur des ressources de leur domaine de création)
+- __Groupe universel__ : comme groupe global mais à l'echelle de la forêt
+
+## Containers par défaut
+
+- __Builtin__ : Objets groupes de domaine local créés par défaut pour la gestion du
+domaine AD
+- __System__ : Objets nécessaires au fonctionnement de l’AD
+
+
+## Délégations administratives
+
+Permets de déléguer certains droits, ex : droit de reset MDP  
 
 
 # AD
@@ -115,6 +145,9 @@ Utilisateur :
 
 
 ## Sécurité de l'AD
+
+Voir le tiering pour les OU : https://www.it-connect.fr/active-directory-tiering-model-les-fondamentaux/  
+
 
 www.pingcastle.com : permet de faire un audit de l'annuaire AD  
 GPO bitlocker

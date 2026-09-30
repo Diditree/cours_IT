@@ -1,5 +1,9 @@
 # Powershell
 
+```powershell
+blabla | Select Name > c:\xd.txt
+```
+
 ## Notes 
 Ctrl + espace pour voir toutes les options d'une commande  
 
