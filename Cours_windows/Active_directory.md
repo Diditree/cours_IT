@@ -1,6 +1,6 @@
 # Active Directory
 
-__Canal sécurisé__(mot de passe) entre l'objet ordinateur et l'AD : possibilité de réinitialiser   
+__Canal sécurisé__ : Relation d'approbation entre un objet ordinateur et le domaine, c'est comme un mot de passe entre l'objet ordinateur et l'AD. Il est généré au moment où l'ordinateur rejoint l'AD, il est possible de le réinitialiser     
 
 __Niveau fonctionnel de domaine__ : pour les DC, si 2025 , ils doivent tous être en 2025 (voir __niveau fonctionnel de forêt) 
   
@@ -12,22 +12,25 @@ Commande liée à la replication :
   
 corbeille active directory   
 
-__PAS__ = catalogue global, synchronise les objets entre les domaines mais pas tous leurs attributs  
+__Catalogue Global__: Annuaire contenant les objets de la forêt mais de façon partielle, permet de rechercher rapidement des objets dans toute la forêt    
+__PAS__ = attributs répliqués dans le __Catalogue Global__  
+
 
 Groupe __Administrateurs de l'entreprise__ = seulement disponible sur le domaine racine  
 
-__Magasin d'identité__  
+__Magasin d'identité__ = annuaire AD contenant les identités du domaine (utilisateurs, groupes, ordinateurs...) et leurs attributs   
 
-__Ticket__ , __TGT__  
+ 
+__TGT__(Ticket Granting Ticket) : ticket kerberos d'authentification utilisé pour demander des tickets d'accès aux services   
+__Ticket__ : Ticket kerberos permettant d'ccéder à un serveur sans fournir à nouveau son MDP  
 
 
-__Schéma Active Directory__ = comme prototype d'objet, ex user : créer un user = instancier l'objet user     
-1 schéma par forêt  
+__Schéma Active Directory__ = comme prototype d'objet, ex user : créer un user = instancier l'objet user, il y a 1 schéma par forêt  
 
 __SYSVOL__ Windows\SYSVOL\sysvol : endroit où l'on peut constater la synchronisation entre deux DC(Les GPO sont stockées dedans)  
 Voir __DFSR__ dans __sysvol__      
  
-à la promotion d'un serveur en controleur de domaine un compte "__krbtgt__" est créé automatiquement  
+à la promotion d'un serveur en controleur de domaine un compte "__krbtgt__" est créé automatiquement   
 
 __NTDS__ = base de données :  
 Base de donnée AD qui remplace la base SAM : __ntds.dit__ C:\Windows\NTDS\ntds.dit  
@@ -74,17 +77,17 @@ Exemple d'un fichier de partage "Comptabilité" en accès "Modification" pour le
 - __Builtin__ : Objets groupes de domaine local créés par défaut pour la gestion du
 domaine AD
 - __System__ : Objets nécessaires au fonctionnement de l’AD
-
+- __Computers__
+- __Users__
 
 ## Délégations administratives
 
 Permets de déléguer certains droits, ex : droit de reset MDP  
 
+Clique droite sur l'OU : Délégation de contrôle
+
 
 # AD
-_source ENI :  Windows Server 2022
-- Les bases indispensables pour administrer et configurer votre serveur_
-
 Une __forêt__ est une collection d'un ou plusieurs domaines AD  
 Le premier installé est le __domaine racine__  
 __serveur en mode RODC__ = Controle de domaine en lecture seule(voir groupe de réplication dont le mdp RODC est autorisé/refusé)  
