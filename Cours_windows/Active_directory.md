@@ -1,5 +1,7 @@
 # Active Directory
 
+On peut créer et exporter une console __MMC__ depuis l'AD : clique droit sur OU > ouvrir fenetre  
+
 __Canal sécurisé__ : Relation d'approbation entre un objet ordinateur et le domaine, c'est comme un mot de passe entre l'objet ordinateur et l'AD. Il est généré au moment où l'ordinateur rejoint l'AD, il est possible de le réinitialiser     
 
 __Niveau fonctionnel de domaine__ : pour les DC, si 2025 , ils doivent tous être en 2025 (voir __niveau fonctionnel de forêt) 

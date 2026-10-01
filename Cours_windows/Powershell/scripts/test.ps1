@@ -127,3 +127,29 @@ memoryarray
 diskdrive
 computersystem > name
 operatingsystem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+New-ADGroup -Name "DL-Informatique-R" -GroupScope DomainLocal -GroupCategory Security -Path "OU=Domaine Locale,OU=Groupes,OU=domDL,DC=domDL,DC=ad"
+New-ADGroup -Name "DL-Informatique-RW" -GroupScope DomainLocal -GroupCategory Security -Path "OU=Domaine Locale,OU=Groupes,OU=domDL,DC=domDL,DC=ad"
+New-ADGroup -Name "DL-Informatique-CT" -GroupScope DomainLocal -GroupCategory Security -Path "OU=Domaine Locale,OU=Groupes,OU=domDL,DC=domDL,DC=ad"
+New-ADGroup -Name "DL-Informatique-REFUS" -GroupScope DomainLocal -GroupCategory Security -Path "OU=Domaine Locale,OU=Groupes,OU=domDL,DC=domDL,DC=ad"
