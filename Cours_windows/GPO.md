@@ -33,3 +33,8 @@ gpupdate
 gpresult /r
 
 ```
+
+
+# ??
+groupe restreint  
+gestion de donnée dans le partage  
