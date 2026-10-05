@@ -1,9 +1,16 @@
 # Notes
+
+Les fichiers de services sont placés dans `/usr/lib/systemd/system`
+  
 Aggrandir le swap:  
 https://blog.zwindler.fr/2016/02/06/reminder-agrandissement-de-swap-linux/
 
   
 Modifier ce qui touche au grub : `/etc/default/grub` (pour appliquer les changements update-grub)
+
+
+sur redhat pour appliquer les changements : `sudo grub2-mkconfig -o /boot/grub2/grub.cfg` (ou `grub2-mkconfig`).  
+
 
 `mkdir -vp ./{bin,tp/{bourne,kornshell,divers/{sources,lib,executables}}}`
 

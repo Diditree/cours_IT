@@ -1,6 +1,9 @@
 # SSH sur Linux  
 fichier de conf : `ssh/sshd_config.f/*conf`  
 
+
+/etc/ssh/sshd_config
+
 Pour logger des erreurs : `ssh -vvv name@ip`  
 
 Pour plus d'infos : https://www.ssh.com/academy/ssh  

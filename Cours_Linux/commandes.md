@@ -140,6 +140,8 @@ e2label # Modifie le label d'une partition
 
 ###############
 
+systemd-analyze ## voir en combien de temps ça a boot
+
 ip a
 
 sed
