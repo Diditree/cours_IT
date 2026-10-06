@@ -39,3 +39,8 @@ Suites: trixie trixie-updates
 Components: main contrib non-free non-free-firmware
 Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
 ```
+
+
+# RHEL
+
+`/etc/yum.repos.d/oracle-linux-ol10.repo`

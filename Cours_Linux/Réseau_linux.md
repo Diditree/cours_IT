@@ -93,3 +93,19 @@ Pour modifier durablement il faut aller dans `/etc/sysctl.conf` et décommenter 
 
 Pour forcer la prise en compte des changements : `sysctl -p`  
 
+## NETWORK MANAGER
+
+service : NetworkManager  
+
+```bash
+sudo nmcli connection add type ethernet ifname enp1s0 con-name enp1s0 ip4 192.168.1.50/24 gw4 192.168.1.1
+sudo nmcli connection modify enp1s0 ipv4.dns "192.168.1.10 192.168.1.11"
+```
+
+```bash
+sudo nmcli connection down "<connection_name>"
+sudo nmcli connection up "<connection_name>"```
+
+```bash
+sudo nmcli connection modify "<connection_name>" ipv4 manual ipv4.addresses <IP_address>/<subnet_mask> ipv4.gateway <gateway_ip> ipv4.dns <dns_ip>
+  ```
