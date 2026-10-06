@@ -43,4 +43,10 @@ Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
 
 # RHEL
 
+Le fichier `/etc/yum.conf`   permet de définir le comportement de YUM.   
+Les .repo se situent dans `/etc/yum.repos.d`    
+
 `/etc/yum.repos.d/oracle-linux-ol10.repo`
+
+disable ol8_UEKR7 sur oracle 8:  
+`config-manager --disable ol8_UEKR7`

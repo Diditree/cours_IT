@@ -150,3 +150,36 @@ print(server.get("port"))
 # get port si il n'existe pas alors 80
 print(server.get("port", 80))
 ```
+## Slicing
+
+```python
+sequence[:stop]     # Commence à 0 et s'arrête à stop (exclu)
+sequence[start:]    # Commence à start et va jusqu'à la fin
+sequence[::step]    # Prend tout avec un pas spécifique
+sequence[:]         # Copie complète de la séquence
+
+#
+# EXEMPLE
+#
+numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+print(numbers[2:5])   # [2, 3, 4]
+print(numbers[:4])    # [0, 1, 2, 3]
+print(numbers[5:])    # [5, 6, 7, 8, 9]
+print(numbers[::2])   # [0, 2, 4, 6, 8] (un élément sur deux)
+
+```
+
+## Fonctions
+
+Synthaxe  
+```python
+def nom_de_la_fonction():
+    print("Hello !")
+
+def nom_de_la_fonction(nom):
+    print(f"Hello, {nom} !")
+
+nom_de_la_fonction = lamba x,y: x * y
+print(nom_de_la_fonction(4,5))
+```
