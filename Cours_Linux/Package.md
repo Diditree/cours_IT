@@ -25,3 +25,17 @@ DEB12 :
 deb http://security.debian.org/debian-security trixie-security main  
 deb http://ftp.fr.debian.org/debian trixie main  
 deb http://ftp.fr.debian.org/debian trixie-updates main  
+
+
+
+# DEBIAN 13
+
+dans `/etc/apt/sources.list.d/debian.sources` :
+
+```bash
+Types: deb deb-src
+URIs: http://deb.debian.org/debian/
+Suites: trixie trixie-updates
+Components: main contrib non-free non-free-firmware
+Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
+```
