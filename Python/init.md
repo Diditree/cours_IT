@@ -41,12 +41,14 @@ Comparaison : == , != , > , < , >= , <=
 || = or  
 ! = not  
 
-__is__  (à dig)  
+`is` , `is not` = compare si ils sont le même objet
 
 
 
 ## Condition
 
+
+IF/ELIF:   
 ```python
 if condition:
     # code
@@ -54,6 +56,21 @@ elif autre_condition:
     # code
 else:
     # code
+```
+
+MATCH/CASE(switch)
+
+```python
+    def decrire_feu(couleur):
+        match couleur:
+            case "vert":
+                return "Passez"
+            case "orange":
+                return "Ralentissez"
+            case "rouge":
+                return "Arretez-vous"
+            case _:
+                return "Couleur inconnue"
 ```
 
 ## List
@@ -80,20 +97,20 @@ print(len(numbers))
 
 
 Boucle for:
-```
+```python
 for number in numberss:
     print(number)
 ```
 
 Si on veut l'index et sa valeur:
-```
+```python
 for index, number in enumerate(numbers):
     print(index, number)
 ```
 
 
 
-```
+```python
 if "01" in numbers:
     print("01 présent")
 ```
@@ -102,7 +119,7 @@ if "01" in numbers:
 
 Comme les listes mais immutable
 
-```
+```python
 coordinates = (48.8566, 2.3522)
 server = ("web01", "192.168.1.10", 443)
 ```
