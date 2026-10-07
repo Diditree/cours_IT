@@ -1,11 +1,15 @@
 # Stockage/disque/partition
 
+`lsblk` : liste les disques  
+`fdisk -l` : / 
+Il faut __mkfs__ avant de monter la partition   
+
 
 ![Stockage LVM](img/LVM.png)
 
 le format sur linux est ext4  
 
-pvs (permet de visualiser les groupes et l'espace free)
+`pvs` (permet de visualiser les groupes et l'espace free)
 lvs  
 
 • pvcreate : création des volumes physiques ;
@@ -21,7 +25,7 @@ les partitions logiques sont par exemple home,root,swap,var...
 
 Pour créer une nouvelle partition logique de 20GB qui s'appelerait var : `lvcreate -n var -L 20G <groupe volume>`  
 
-`lvextend -r -L +100%FREE </dev/group/partition>` (-r permet de faire un resize2fs directement, ils doivent être séparés cependant)  
+`lvextend -r -l +100%FREE </dev/group/partition>` (-r permet de faire un resize2fs directement, ils doivent être séparés cependant)  
 
 
 ## Créer une partition

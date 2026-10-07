@@ -74,8 +74,6 @@ dnf updateinfo list --sec-severity Critical
 mount -t cifs //10.35.0.6/ressources/depot/Linux/OracleLinux /mnt -o vers=1.0,username=dimitri.lepilleur2025@campus-eni.fr
 
 
- R:\Depot\Linux\OracleLinux
-
 ## MAKE
 
 Sert à compiler :  
