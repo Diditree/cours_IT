@@ -60,12 +60,23 @@ mount
 
 
 
+## Notes random
+
+Pour /dev/sdb1/data en XFS  
+
+- /dev/sdb1 = partition
+- XFS = système de fichiers
+- /data = point de montage
+
+Pour /dev/vgdata/lvdata  
+
+- /dev/sdb1 = partition qui fournit l'espace au LV (partition configurée comme PV LVM)
+- /dev/vgdata = Volume Group(VG)
+- /dev/vgdata/lvdata = Logical Volume(LV)
 
 
 
-
-
-
+##   ???
 sudo mount -t cifs //172.15.44.1/Support_Info /mnt/support -o username=dimitri,password=didi3112,vers=3.0
 
 -t = type de fichier
