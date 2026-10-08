@@ -102,18 +102,49 @@ for number in numberss:
     print(number)
 ```
 
+
+__Enumerate__ (ForEach)  
 Si on veut l'index et sa valeur:
 ```python
 for index, number in enumerate(numbers):
     print(index, number)
 ```
-
-
-
 ```python
 if "01" in numbers:
     print("01 présent")
 ```
+
+## List comprehension
+
+Liste comprehension : liste créé à partir d'un itérable(une autre liste dans l'exemple ci dessous)   
+Créer une nouvelle liste qui contient uniquement les serveurs dont le nom commence par web :   
+```python
+servers = ["web01", "web02", "db01", "web03"]
+
+web_servers = []
+
+for server in servers:
+    if server.startswith("web"):
+        web_servers.append(server)
+
+# Résultat de web_servers = ['web01', 'web02', 'web03']
+
+```
+
+
+Autre exemple : 
+
+
+```python
+numbers = [1, 2, 3, 4, 5]
+
+squares = [number ** 2 for number in numbers]
+# Résultat de squares = [1, 4, 9, 16, 25]
+```
+
+
+
+
 
 ## Tuples
 
@@ -200,3 +231,23 @@ def nom_de_la_fonction(nom):
 nom_de_la_fonction = lamba x,y: x * y
 print(nom_de_la_fonction(4,5))
 ```
+
+Fonction typée : 
+
+```python
+def add(a: int, b: int) -> int:
+    return a + b
+```
+
+```python
+def get_servers() -> list[str]:
+    return ["web01", "web02", "db01"]
+```
+
+Si le nombre de paramètres est variable :   
+```python
+def get_saucisses(*saucisses):
+      for saucisse in saucisses:
+        print(saucisse)
+```
+voir __*kwargs__  
