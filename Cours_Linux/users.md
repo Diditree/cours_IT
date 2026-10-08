@@ -1,5 +1,11 @@
 # Gestion des utilisateurs
 
+`getent passwd userName`
+
+`chage -l userName` : affiche l'expiration d'un compte
+
+`~./bashrc` : fichier de configuration pour chaque utilisateur, pour custom le shell  
+
 `id nomDuUser`
 
 `/etc/passwd` : fichier qui contient les utilisateurs  
@@ -9,7 +15,7 @@
 Structure d'une ligne :  
 __login__:__x__(anciennement le mdp):__UID__:__GID__(groupe principal du user):__champ commentaires GCOS__:__repertoire personnel__:__shell par défaut__    
 
-les mdps sont stockés dans `/etc/shadow`  
+Les mdps et les informations des utilisateurs sont stockés dans `/etc/shadow`  
 
 `/etc/default/useradd` : options par défaut utilisées dans `user add`  
 
@@ -23,7 +29,13 @@ user # useradd nomDuUser -u UID -g Groupe principal -G Groupes secondaires -c "c
      # userdel -r (supprime le /home/directory)
 
 passwd # permet de gérer le password
+        # l'option -e demande à l'utilisateur de changer son MDP à la connexion
 ```
+useradd leto -g duc -G users,adm,vip -c "Leto Atreides" -md /home/leto -s /bin/ksh
+
+
+
+Pour `useradd`, l'option `-e` permet de configurer une date d'expiration pour le compte (https://www.it-connect.fr/gerer-une-expiration-automatique-des-comptes-sous-linux/)    
 
 ## UID
 
@@ -45,7 +57,11 @@ passwd # permet de gérer le password
 ## Groupes
 
 `/etc/group` : groupes  
-1 ligne par groupe, 4 champs par lignes séparés par des __`:`__ 
+1 ligne par groupe, 4 champs par lignes séparés par des __`:`__    
+
+ Les mdp et les informations des groupes sont stockés dans `/etc/gshadow`    
+
+retirer un utilisateur d'un groupe : `gpasswd -d userName groupName`   
 
 __nomDuGroupe__:__x__(password mais jamais demandé):__GID__:__membres qui ont ce groupe en groupe secondaire__  
 
@@ -74,3 +90,15 @@ Commandes orientées groupes :
 - ajouter au groupe : `gpasswd -a username`
 
 - retirer du groupe: `gpasswd -d username`  
+
+
+
+
+## Notes
+
+Expirer un compte à une date précise et reset MDP tous les 90j avec un rappel tous les 7j :  
+
+```bash
+usermod -e AAAA-MM-DD userName
+passwd userName -x 90 -w 7
+```
