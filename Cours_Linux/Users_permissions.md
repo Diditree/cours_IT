@@ -1,16 +1,17 @@
 # Définitions
-__Sticky Bit__ : Lorsqu'il est activé sur un dossier, il restreint le droit de suppression et de renommage    
+__Sticky Bit__ 1 : Lorsqu'il est activé sur un dossier, il restreint le droit de suppression et de renommage ( côté other : __t__ si droit de X et __T__ si pas le droit de X)     
 
-__SetUID__ : Quand un utilisateur lance un programme avec le bit SetUID activé, le programme s'exécute avec les droits du propriétaire du fichier, et non avec ceux de l'utilisateur qui le lance  ( __s__ à la place de __x__ dans les droits du propriétaire )      
+__SetUID__ 4 : Quand un utilisateur lance un programme avec le bit SetUID activé, le programme s'exécute avec les droits du propriétaire du fichier, et non avec ceux de l'utilisateur qui le lance  ( __s__ à la place de __x__ dans les droits du propriétaire )      
 
-_SetGID__ : Les nouveaux fichiers héritent automatiquement du groupe du dossier ( __s__ aussi mais côté groupe )     
+__SetGID__ 2 : Les nouveaux fichiers héritent automatiquement du groupe du dossier ( __s__ aussi mais côté groupe )     
 
 # Permissions
 
 https://doc.ubuntu-fr.org/permissions
 
-_à voir `umask`_
-
+__Umask__ :  
+L’umask est utilisé pour déterminer les droits des fichiers et répertoires par défaut lors de leur création   
+La valeur de l’umask sera « soustraite » à la valeur des droits maximaux à la création : 0666 pour un fichier, 0777 pour un répertoire.  
 
 
 `sudo adduser didi` créer un nouvel utilisateur didi , créer un /home/didi , enregistre les infos demandées dans __etc/passwd__ et __/etc/shadow__
@@ -88,5 +89,7 @@ stickybit: o+t
 ex `chmmod u+s monscript.sh` (active le setuid sur monscript.sh, donc s)
 
 
-# Exemples
+# Notes
+
+Afficher les droits octal sur un fichier : `stat -c '%a %G %U %n /coucou/*'`
 
