@@ -31,7 +31,11 @@ ps -fu
 ps aux
 top # htop,atop,glances (seul top est installé nativement)
 pstree
+ps -eo # Permet de choisir et de trier
 ```
+Exemple ps -eo :  
+`ps -eo pid,ppid,user,ni,stat,comm --sort=-%cpu | head -n 11`
+
 
 Recherche parmis les processus :  
 
@@ -76,6 +80,8 @@ lvs # logique
 
 ### Autre
 
+
+Voir quel processus écoute sur quel port : `lsof -i :PORT`  
 
 ```bash
 lsof # permet de connaitre l’activité des fichiers ouverts dans un répertoire donné

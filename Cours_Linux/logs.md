@@ -1,12 +1,12 @@
 # logs
 
 
-journalctl | grep "session opened"
+`journalctl | grep "session opened"`
 
 ## journald
 
-conf: /etc/systemd/journald.conf  
-service : systemd-journald.service  
+conf: `/etc/systemd/journald.conf`  
+service : `systemd-journald.service`  
 logs stockés dans une BDD : commande __journalctl__ > /var/log/journal  
 
 ```bash
@@ -21,7 +21,7 @@ journalctl
 
 ## rsyslog
 
-conf = /etc/rsyslog.conf  
+conf = `/etc/rsyslog.conf`  
 fichier de service : rsyslog.service  
 stock les logs dans des fichiers textes  
 
@@ -40,5 +40,7 @@ Rechercher dans les fichiers rsyslog des informations sur le disque sda :
 
 
 Rotation des journaux:  
+
+https://blog.stephane-robert.info/docs/admin-serveurs/linux/exploiter/systemd/logrotate/  
 
 `etc/logrotate.d/wtmp`
