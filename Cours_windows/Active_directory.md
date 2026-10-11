@@ -14,7 +14,7 @@ Commande liée à la replication :
   
 corbeille active directory   
 
-__Catalogue Global__: Annuaire contenant les objets de la forêt mais de façon partielle, permet de rechercher rapidement des objets dans toute la forêt    
+__Catalogue Global__: Annuaire contenant les objets de la forêt mais de façon partielle, permet de rechercher rapidement des objets dans toute la forêt. Authentification et groupes universels : Lors de la connexion d'un utilisateur, il sert à vérifier l'appartenance aux groupes universels.      
 __PAS__ = attributs répliqués dans le __Catalogue Global__  
 
 
@@ -68,7 +68,7 @@ Exemple d'un fichier de partage "Comptabilité" en accès "Modification" pour le
 
 
 ## Groupes  
-- __Groupe distribution__ : pour diffuser (mail etc)   
+- __Groupe distribution__ : pour diffuser (mail etc), il ne possède pas de SID donc inutilisable pour les ACL   
 - __Groupe sécurité__: droits ACL  
 - __Groupe Global__ : regrouper des objets similaires(ex: tous les commerciaux) , Uniquement objets utilisateur, ordinateur ou groupe global du même domaine   
 - __Groupe Domaine Local__ : Donner des droits d'accès à des ressources (Uniquement sur des ressources de leur domaine de création)
