@@ -27,7 +27,7 @@ __TGT__(Ticket Granting Ticket) : ticket kerberos d'authentification utilisé po
 __Ticket__ : Ticket kerberos permettant d'ccéder à un serveur sans fournir à nouveau son MDP  
 
 
-__Schéma Active Directory__ = comme prototype d'objet, ex user : créer un user = instancier l'objet user, il y a 1 schéma par forêt  
+__Schéma Active Directory__ = c'est comme un prototype d'objet: ex user : créer un user = instancier l'objet user, il y a 1 schéma par forêt  
 
 __SYSVOL__ Windows\SYSVOL\sysvol : endroit où l'on peut constater la synchronisation entre deux DC(Les GPO sont stockées dedans)  
 Voir __DFSR__ dans __sysvol__      
@@ -37,7 +37,7 @@ Voir __DFSR__ dans __sysvol__
 __NTDS__ = base de données :  
 Base de donnée AD qui remplace la base SAM : __ntds.dit__ C:\Windows\NTDS\ntds.dit  
 La base de données __NTDS__ est repartie en 3 partitions : Configuration, schéma, domaine
-Schéma et config : répliquer sur chaque __DC__(les mêmes)  
+Schéma et configuration : répliquer sur chaque __DC__(les mêmes)  
 
 
 __patitions applicatives__ potentielles qui peuvent être ajotuée à la base annuaire __NTDS__ : __DNS__ , __PAS__  

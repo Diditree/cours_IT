@@ -1,5 +1,17 @@
 # Repertoires et arborescence
 
+## TLDR
+
+- /home : dossiers utilisateurs
+- /etc : les configurations système
+- /var : les données qui changent souvent, logs, services
+- /bin : commandes de base
+- /usr : programmes et ressources installés
+- /root : dossier de root
+- /tmp : fichiers temporaires
+- /boot : fichiers de démarrage
+- /dev : périphériques
+
 ## /proc (process)
 
 __proc__ pour processus et non processeur.  
