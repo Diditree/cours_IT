@@ -29,9 +29,24 @@ chmod 700 /root/.ssh
 cp /home/admin/.ssh/authorized_keys /root/.ssh
 ```
 
+## Config (.ssh/config)
 
+```bash
+Host NOM
+    HostName IP
+    User USER
+    IdentityFile ~/.ssh/XXXXX
+```
 
+## Agent ssh
+
+`ssh-add -l` : liste les agents ssh  
+`ssh-agent` : créer un agent  
+`ssh-add` : ajoute la clé (voir en dessous)
 
 ## Notes
 
-voir `ssh -i` pour redefinir chemin 
+voir `ssh -i` pour redefinir chemin   
+
+
+On peut utiliser une clé privée pour se connecter à un serveur qui à une clé publique : `ssh -i ~/.ssh/XXXXX user@server`
