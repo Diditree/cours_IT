@@ -1,0 +1,1 @@
+__MCP__ (Model Context Protocol) : standard pour permettre de connecter une ia à des outils(un peu comme une API pour les IA)    
