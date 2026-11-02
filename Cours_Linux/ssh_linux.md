@@ -19,9 +19,14 @@ id_rsa.pub = publique
   
 ## Copier une clé publique
 
-`ssh-copy-id USER@IP` : Génère un fichier `authorized_keys` dans $HOME/.ssh qui copie le `id_rsa.pub` généré avec `ssh-keygen` sur le client
+`ssh-copy-id USER@IP` : Génère un fichier `authorized_keys` dans $HOME/.ssh qui copie le `id_rsa.pub` généré avec `ssh-keygen` sur le client    
+Exemple : `ssh-copy-id -i ~/.ssh/id_ed25519.pub USER@SRV`     
 
-Pour attribuer la clé à root :
+
+
+
+
+Pour attribuer la clé à root :  
 
 ```bash
 mkdir /root/.ssh
