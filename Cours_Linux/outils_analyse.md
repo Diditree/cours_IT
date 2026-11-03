@@ -50,11 +50,14 @@ Envoi de signaux à des processus
 kill PID
 kill -N°Signal PID
 ```
-### Ports
+### Ports et réseau
 
 ```bash
-ss -tuln
+ss -tuln #  liste les ports réseau en écoute, -t affiche le socket TCP, -u affiche le socket UDP, -l affiche seulement ceux listening, -n affiche l'ip et le n° de port
+nc -zv <IP_hôte> <PORT> # Lance NETCAT, -z effectue un scan de port sans envoyer de données, -v verbose
 ```
+
+
 
 ### Systèmes de fichiers (disque)
 
