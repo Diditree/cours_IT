@@ -57,8 +57,6 @@ ss -tuln #  liste les ports réseau en écoute, -t affiche le socket TCP, -u aff
 nc -zv <IP_hôte> <PORT> # Lance NETCAT, -z effectue un scan de port sans envoyer de données, -v verbose
 ```
 
-
-
 ### Systèmes de fichiers (disque)
 
 ```bash
