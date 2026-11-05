@@ -6,3 +6,6 @@ Log réseau :
 C:\Windows\System32\LogFiles\Firewall\    
 
 Analyseur de perf  
+
+   
+`netlogon.log`  

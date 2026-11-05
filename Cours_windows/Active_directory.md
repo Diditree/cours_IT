@@ -8,8 +8,16 @@ __Niveau fonctionnel de domaine__ : pour les DC, si 2025 , ils doivent tous êtr
   
 __Sites AD__ : temps de réplication dans defaultip(clique droite IP) : service de replication = __KCC__ , c'est lui qui génère NTDS settings 
 Commande liée à la replication :    
- ```
+ ```powershell
  repadmin
+
+repadmin /replsummary # fournit une vue synthétique de l’état de la réplication Active Directory entre les contrôleurs de domaine (DC) d’une forêt ou d’un domaine
+
+repadmin /replsummary # analyse tous les DC découverts.
+repadmin /replsummary DC01 DC02 # limite l’analyse aux DC indiqués.
+repadmin /replsummary /bysrc ou /bydest # n’affiche que l’une des deux sections.
+repadmin /replsummary /sort:delta # trie par plus grand delta.
+repadmin /replsummary /errorsonly # n’affiche que les DC en erreur.
  ```
   
 corbeille active directory   
